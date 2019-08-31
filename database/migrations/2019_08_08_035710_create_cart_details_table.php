@@ -14,14 +14,14 @@ class CreateCartDetailsTable extends Migration
     public function up()
     {
         Schema::create('cart_details', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
 
             // FK header
-            $table->bigIncrements('cart_id')->unsigned();
+            $table->integer('cart_id')->unsigned();
             $table->foreign('cart_id')->references('id')->on('carts');
 
             //FK product
-            $table->bigIncrements('product_id')->unsigned();
+            $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
 
             $table->integer('quantity'); //cantidad en el carrito 

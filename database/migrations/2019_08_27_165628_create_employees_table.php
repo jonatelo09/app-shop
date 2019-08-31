@@ -14,7 +14,7 @@ class CreateEmployeesTable extends Migration
     public function up()
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
             $table->string('apellidos',200);
             $table->string('email');
@@ -22,7 +22,7 @@ class CreateEmployeesTable extends Migration
             $table->string('address',200);
 
             //FK
-            $table->bigIncrements('ocupation_id')->unsigned()->nullable();
+            $table->integer('ocupation_id')->unsigned()->nullable();
             $table->foreign('ocupation_id')->references('id')->on('ocupations');
             $table->timestamps();
         });
