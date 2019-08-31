@@ -19,7 +19,7 @@ class CreateProductImagesTable extends Migration
             $table->string('featured')->default(false);
 
 
-            $table->integer('product_id')->unsigned();
+            $table->bigIncrements('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
 
             $table->timestamps();

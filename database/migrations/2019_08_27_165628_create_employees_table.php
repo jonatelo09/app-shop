@@ -22,7 +22,7 @@ class CreateEmployeesTable extends Migration
             $table->string('address',200);
 
             //FK
-            $table->integer('ocupation_id')->unsigned()->nullable();
+            $table->bigIncrements('ocupation_id')->unsigned()->nullable();
             $table->foreign('ocupation_id')->references('id')->on('ocupations');
             $table->timestamps();
         });

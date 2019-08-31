@@ -20,7 +20,7 @@ class CreateCartsTable extends Migration
             $table->string('status'); // active, pending, aproved, cancelled, finished
 
             // user_id (FK) customer
-            $table->integer('user_id')->unsigned();
+            $table->bigIncrements('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();

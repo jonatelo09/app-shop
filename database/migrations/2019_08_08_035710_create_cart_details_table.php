@@ -17,11 +17,11 @@ class CreateCartDetailsTable extends Migration
             $table->bigIncrements('id');
 
             // FK header
-            $table->integer('cart_id')->unsigned();
+            $table->bigIncrements('cart_id')->unsigned();
             $table->foreign('cart_id')->references('id')->on('carts');
 
             //FK product
-            $table->integer('product_id')->unsigned();
+            $table->bigIncrements('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products');
 
             $table->integer('quantity'); //cantidad en el carrito 
