@@ -8,8 +8,8 @@ class AspirantController extends Controller
 {
     public function index()
     {
-    	$aspirat = Aspirant::paginate(3);
-    	return view('admin.aspirantes.index')->with(compact('aspirant'));
+    	$aspirantes = Aspirant::paginate(3);
+    	return view('admin.aspirant.index')->with(compact('aspirantes'));
     }
     public function store(Request $request)
     {
@@ -18,10 +18,9 @@ class AspirantController extends Controller
     	$aspirant->email = $request->input('email');
     	$aspirant->phone = $request->input('phone');
     	$aspirant->oficio = $request->input('oficio');
-        dd($aspirant);
     	$aspirant->save();
 
-    	return redirect('/admin/aspirantes');
+    	return redirect('/');
     }
 
     public function destroy($id)

@@ -1,5 +1,6 @@
 <?php
 Route::get('/','TestController@welcome');
+Route::get('/admin/aspirant','AspirantController@index');
 Route::post('/admin/aspirant','AspirantController@store');
 
 Auth::routes();
@@ -40,10 +41,20 @@ Route::middleware(['auth','admin'])->prefix('admin')->namespace('Admin')->group(
     Route::post('/category/{id}/edit','CategoryController@update'); //actualizar
     Route::post('/category/{id}/delete','CategoryController@destroy'); // form eliminar
 
-    Route::post('/aspirant','AspirantController@store');
+   // Route::post('/aspirant','AspirantController@store');
 });
 
+// Paypal
+// Enviamos nuestro pedido a PayPal
+Route::get('payment', array(
+    'as' => 'payment',
+    'uses' => 'PaypalController@postPayment',
+));
+// Después de realizar el pago Paypal redirecciona a esta ruta
+Route::get('payment/status', array(
+    'as' => 'payment.status',
+    'uses' => 'PaypalController@getPaymentStatus',
+));
 
-
-Route::get('/admin/products/prueba','ProductController@prueba');
+Route::get('/pagar/order','PaypalController@index');
 

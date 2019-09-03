@@ -13,32 +13,28 @@
         <h2 class="title">Aspirantes Postulados</h2>
         <div class="team">
         	<div class="row">
-        		<a href=" {{url('/admin/aspirant/create')}} " class="btn btn-primary btn-round">Nuevo aspirante</a>
         		<table class="table">
         			<thead>
         				<tr>
         					<th class="col-md-2 text-center">Nombre</th>
-        					<th class="col-md-5">Email</th>
-                            <th>Telefono</th>
-                            <th>Oficio</th>
+        					<th class="col-md-5 text-center">Email</th>
+                            <th class="text-center">Telefono</th>
+                            <th class="text-center">Oficio</th>
                             <th class="text-right">Opciones</th>
         				</tr>
         			</thead>
         			<tbody>
-        				@foreach( $aspitantes as $aspirant)
+        				@foreach( $aspirantes as $aspirant)
         				<tr>
         					<td>{{ $aspirant->nameFull}}</td>
         					<td>{{ $aspirant->email}}</td>
-                            <td>{{ $aspirant->phone}}</td>
-                            <td>{{ $aspirant->oficio}}</td>
+                            <td class="text-center">{{ $aspirant->phone}}</td>
+                            <td class="text-center">{{ $aspirant->oficio}}</td>
         					<td class="td-actions text-right">
 								<form method="post" action="{{url('/admin/aspirant/'.$aspirant->id.'/delete')}}">
 									@csrf
-									<a href="{{url('/aspirant/'.$aspirant->id) }}" rel="tooltip" title="ver detalles" class="btn btn-info btn-sm btn-xs "> <i class="fa fa-info"></i></a>
-
-        							<a href="{{url('/admin/aspirant/'.$aspirant->id.'/edit')}}" rel="tooltip" title="Editar producto" class="btn btn-success btn-sm btn-xs"> <i class="fa fa-edit"></i></a>
                                     
-									<button type="submit" rel="tooltip" title="Eliminar" class="btn btn-success btn-sm btn-xs"><i class="fa fa-times"></i></button>
+									<button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-sm btn-xs"><i class="fa fa-times"></i></button>
 								</form>
         						
         					</td>
@@ -46,7 +42,7 @@
         				@endforeach
         			</tbody>
         		</table>
-                {{$aspirantes->link()}}
+                {{$aspirantes->links()}}
         	</div>
       	</div><!-- end team -->
       </div><!-- end section -->

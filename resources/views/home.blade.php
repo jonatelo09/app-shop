@@ -79,6 +79,9 @@
             <h2 class="text-right text-primary"><strong>Importe a pagar: $</strong>{{auth()->user()->cart->total}} </h2>
 
             <div class="text-center">
+                    <!--<a href="{{url('/pagar/order')}} " class="btn btn-primary btn-round">
+                        <i class="material-icons">done</i>Relizar pedido
+                    </a>-->
                 <form method="post" action=" {{ url('/order')}} ">
                     @csrf
                     <button class="btn btn-primary btn-round">

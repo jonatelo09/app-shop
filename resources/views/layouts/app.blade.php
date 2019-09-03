@@ -11,6 +11,7 @@
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
         name='viewport' />
+    
 
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -20,7 +21,9 @@
     <!-- CSS Files -->
     <link href="{{ asset('css/material-kit.css')}}" rel="stylesheet" />
     <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="{{asset('css/estilos.css')}}" />-->
     @yield('style')
+    @yield('head')
 </head>
 
 <body class="@yield('body-class')">
@@ -96,6 +99,41 @@
     </div>
     @include('includes.footer')
 </body>
+<!-- scripts openpay -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript"src="https://openpay.s3.amazonaws.com/openpay.v1.min.js"></script>
+<script type='text/javascript' src="https://openpay.s3.amazonaws.com/openpay-data.v1.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        OpenPay.setId('mzdtln0bmtms6o3kck8f');
+        OpenPay.setApiKey('pk_f0660ad5a39f4912872e24a7a660370c');
+        OpenPay.setSandboxMode(true);
+        //Se genera el id de dispositivo
+        var deviceSessionId = OpenPay.deviceData.setup("payment-form", "deviceIdHiddenFieldName");
+        
+        $('#pay-button').on('click', function(event) {
+            event.preventDefault();
+            $("#pay-button").prop( "disabled", true);
+            OpenPay.token.extractFormAndCreate('payment-form', sucess_callbak, error_callbak);                
+        });
+
+        var sucess_callbak = function(response) {
+          var token_id = response.data.id;
+          $('#token_id').val(token_id);
+          $('#payment-form').submit();
+        };
+
+        var error_callbak = function(response) {
+            var desc = response.data.description != undefined ? response.data.description : response.message;
+            alert("ERROR [" + response.status + "] " + desc);
+            $("#pay-button").prop("disabled", false);
+        };
+
+    });
+</script>
+
 <!--   Core JS Files   -->
 <script src="{{asset('/js/jquery.min.js') }}" type="text/javascript"></script>
 <!-- <script src="{{asset('/js/all.js') }}" type="text/javascript"></script> -->
