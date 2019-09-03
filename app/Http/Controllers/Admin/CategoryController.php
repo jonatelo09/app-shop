@@ -40,7 +40,7 @@ class CategoryController extends Controller
         $name = Input::get('name', 'Sally');
         $categori->name =  $request->input('name');
         $categori->description =  $request->input('description');
-        $categori->image = $request->input('image');*/
+        $categori->image = $request->input('image');
         dd($categori);
         $categori->save(); //ejecutar una consulta INSERT a la tabla productos
 
