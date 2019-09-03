@@ -8,6 +8,6 @@ class Employee extends Model
 {
     public function ocupation()
     {
-    	return $this->belongTo(Ocupation::class);
+    	return $this->belongsTo(Ocupation::class);
     }
 }

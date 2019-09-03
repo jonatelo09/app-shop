@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'kuroko.arevalo@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'MotoEnvia | Paqueteria Express'),
+        'name' => env('MAIL_FROM_NAME', 'Talachaz.com | Multiservicios'),
     ],
 
     /*
