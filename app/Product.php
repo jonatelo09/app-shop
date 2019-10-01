@@ -4,40 +4,45 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
-{
-    // $product->category
-    public function category()
-    {
-    	return $this->belongsTo(Category::class);
-    }
+class Product extends Model {
+	// $product->category
+	public function category() {
+		return $this->belongsTo(Category::class);
+	}
 
-    //$product ->images
-    
-    public function images()
-    {
-    	return $this->hasMany(ProductImage::class);
-    }
+	//$product ->images
 
-    public function getFeaturedImageUrlAttribute()
-    {
-        $featuredImage = $this->images()->where('featured', true)->first();
-        if (!$featuredImage)
-            $featuredImage = $this->images()->first();
+	public function images() {
+		return $this->hasMany(ProductImage::class);
+	}
 
-        if ($featuredImage) {
-            return $featuredImage->url;
-        }
+	public function comentary() {
+		return $this->hasMany(Comentary::class);
+	}
 
-        //default
-        return '/images/products/product-default.jpg';
-    }
+	public function score() {
+		return $this->hasMany(Score::class);
+	}
 
-    public function getCategoryNameAttribute()
-    {
-        if($this->category)
-            return $this->category->name;
+	public function getFeaturedImageUrlAttribute() {
+		$featuredImage = $this->images()->where('featured', true)->first();
+		if (!$featuredImage) {
+			$featuredImage = $this->images()->first();
+		}
 
-        return 'Genreal';
-    }
+		if ($featuredImage) {
+			return $featuredImage->url;
+		}
+
+		//default
+		return '/images/products/product-default.jpg';
+	}
+
+	public function getCategoryNameAttribute() {
+		if ($this->category) {
+			return $this->category->name;
+		}
+
+		return 'Genreal';
+	}
 }

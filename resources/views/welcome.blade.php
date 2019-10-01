@@ -65,7 +65,7 @@
     </style>
 @endsection
 @section('content')
-<div class="header header-filter" style="background-image: url( {{ asset('img/landing-page.jpg')}} )">
+<div class="header header-filter" style="background-image: url( {{ asset('img/hero2.jpg')}} )">
     <div class="container">
         <div class="row">
             <div class="col-md-8">

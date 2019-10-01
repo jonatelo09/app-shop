@@ -1,16 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('title', 'App shop | Principal')
 
 @section('body-class', 'product-page')
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('img/landing-page.jpg') }}');">
-</div>
 <div class="main main-raised">
-    <div class="container">
+    <div class="container elemento-9">
         <div class="section">
-            <h2 class="title text-center">Pagina principal</h2>
+            <h2 class="title text-center">Carrito</h2>
             @if (session('notification'))
             <div class="alert alert-success" role="alert">
                 {{ session('notification') }}

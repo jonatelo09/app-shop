@@ -57,7 +57,7 @@
 
             <div class="team text-center">
                 <div class="row">
-                    @foreach ($products as $product)      
+                    @foreach ($products as $product)
                         <div class="col-md-4">
                             <div class="team-player">
                                 <img src=" {{ $product->featured_image_url }} " alt="Thumbnail Image" class="img-raised img-circle" style=" with: 250px">

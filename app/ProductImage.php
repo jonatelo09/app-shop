@@ -1,25 +1,21 @@
-<?php 
+<?php
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProductImage extends Model
-{
-    //$productImages->product
-    public function product()
-    {
-    	return $this->belongsTo(Product::class);
-    }
+class ProductImage extends Model {
+	//$productImages->product
+	public function product() {
+		return $this->belongsTo(Product::class);
+	}
 
-    //accesor
-    public function getUrlAttribute()
-    {
-        if(substr($this->image, 0 , 4) === "http")
-        {
-            return $this->image;
-        }
+	//accesor
+	public function getUrlAttribute() {
+		if (substr($this->image, 0, 4) === "http") {
+			return $this->image;
+		}
 
-        return '/images/products/' . $this->image;
+		return '/images/products/' . $this->image;
 
-    }
+	}
 }

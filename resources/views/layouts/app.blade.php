@@ -11,7 +11,7 @@
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
         name='viewport' />
-    
+
 
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -36,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=" {{url('/')}} "> <img src="{{url('img/logomoto.png')}}" style="margin: 0; width: 23.8rem; heigth: 8rem;"> </a>
+                <a class="navbar-brand" href=" {{url('/')}} "> <img src="{{url('img/vector/default-monochrome-white.svg')}}" style="margin: 0; width: 23.8rem; heigth: 8rem;"> </a>
             </div>
             <div class="collapse navbar-collapse" id="navigation-example">
                 <ul class="nav navbar-nav navbar-right">
@@ -49,7 +49,7 @@
                         <a class="nav-link btn btn-success  " href="{{ route('register') }}">{{ __('Register') }}</a>
                     </li>
                     @endif
-                    @else  
+                    @else
                     <li class="dropdown btn btn-info">
                         <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>
@@ -112,11 +112,11 @@
         OpenPay.setSandboxMode(true);
         //Se genera el id de dispositivo
         var deviceSessionId = OpenPay.deviceData.setup("payment-form", "deviceIdHiddenFieldName");
-        
+
         $('#pay-button').on('click', function(event) {
             event.preventDefault();
             $("#pay-button").prop( "disabled", true);
-            OpenPay.token.extractFormAndCreate('payment-form', sucess_callbak, error_callbak);                
+            OpenPay.token.extractFormAndCreate('payment-form', sucess_callbak, error_callbak);
         });
 
         var sucess_callbak = function(response) {

@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-    	$categories = Category::paginate(5);
+    	$categories = Category::paginate(6);
     	return view('admin.category.index')->with(compact('categories')); //devolvera el listado de los productos
     }
 
@@ -37,17 +37,15 @@ class CategoryController extends Controller
         $this->validate($request,$rules,$messages);
 
         $categori = new Category();
-        $name = Input::get('name', 'Sally');
         $categori->name =  $request->input('name');
         $categori->description =  $request->input('description');
         $categori->image = $request->input('image');
-        dd($categori);
         $categori->save(); //ejecutar una consulta INSERT a la tabla productos
 
         if($request->hasFile('image')){
             $file = $request->file('image');
-            $path = public_path() . 'images/categories';
-            $fileName = uniqid() . '-' .$file->getClientOriginalName();
+            $path = public_path() . '/images/categories';
+            $fileName = uniqid(). '-' .$file->getClientOriginalName();
             $moved = $file->move($path, $fileName);
 
             //update category
