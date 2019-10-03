@@ -13,10 +13,10 @@ Route::get('/search', 'SearchController@show');
 Route::get('/products/json', 'SearchController@data');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/products/{id}', 'ProductController@show');
+//Route::get('/products/{id}', 'ProductController@show');
 Route::get('/products-dos/{id}', 'ProductController@showdos');
 
-Route::get('/categories/{category}', 'CategoryController@show');
+//Route::get('/categories/{category}', 'CategoryController@show');
 Route::get('/categories-dos/{category}', 'CategoryController@showdos');
 
 Route::post('/cart', 'CartDetailController@store');

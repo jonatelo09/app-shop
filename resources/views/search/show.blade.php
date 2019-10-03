@@ -4,7 +4,7 @@
 
 @section('body-class', 'profile-page')
 
-@section('styles')
+<!--@section('styles')
     <style>
         .team {
             padding-bottom: 50px;
@@ -27,7 +27,7 @@
             flex-direction: column;
         }
     </style>
-@endsection
+@endsection-->
 @section('content')
 <div class="main main-raised">
     <div class="profile-content">

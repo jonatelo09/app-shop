@@ -11,7 +11,7 @@ class SearchController extends Controller {
 		$products = Product::where('name', 'like', "%$query%")->paginate(6);
 		if ($products->count() == 1) {
 			$id = $products->first()->id;
-			return redirect("products/$id"); // 'products/'.$id
+			return redirect("products-dos/$id"); // 'products/'.$id
 		}
 		return view('search.show')->with(compact('products', 'query'));
 	}
