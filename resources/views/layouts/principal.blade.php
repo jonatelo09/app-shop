@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('selling/fonts/icomoon/style.css')}}">
 
-    <link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}">
+    <!--<link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('selling/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('selling/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('selling/css/owl.theme.default.min.css')}}">
@@ -26,9 +26,17 @@
 
     <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
 
-    <link rel="stylesheet" href="{{asset('selling/css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('selling/css/aos.css')}}">-->
 
     <link rel="stylesheet" href="{{asset('selling/css/style.css')}}">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    @stack('styles')
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -58,8 +66,8 @@
           </div>
           <div class="col-6">
             <p class="mb-0 float-right">
-              <span class="mr-3"><a href="tel://#"> <span class="icon-phone mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">9983456795</span></a></span>
-              <span><a href="#"><span class="icon-envelope mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">servicios@talachaz.com</span></a></span>
+              <span class="mr-3 text-danger"><a href="tel://#"> <span class="icon-phone mr-2 text-danger" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">9983456795</span></a></span>
+              <span><a href="#"><span class="icon-envelope mr-2 text-danger" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">servicios@talachaz.com</span></a></span>
             </p>
 
           </div>
@@ -73,8 +81,8 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2 contenedor">
-            <h1 class="mb-0 site-logo maquina"><a href="{{url('/')}} " class="text-black mb-0 parpadeo"><span class="text-primary  icon-format_size"></span>
-              Talachaz<span class="text-primary">.</span>com <span class="maquina-esc">&#160;</span> </a></h1>
+            <h1 class="mb-0 site-logo maquina"><a href="{{url('/')}} " class="text-black mb-0 parpadeo"><span class="text-danger  icon-format_size"></span>
+              Talachaz<span class="text-danger">.</span>com <span class="maquina-esc">&#160;</span> </a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -87,22 +95,22 @@
                       </a>
                       <ul class="dropdown-menu" role="menu">
                             <li class="ml-2 col-auto">
-                                <a href="#">Mecanica</a>
+                                <a class="text-danger" href="#">Mecanica</a>
                             </li>
                             <li class="ml-2 col-auto">
-                                <a href="#">Albañileria</a>
+                                <a class="text-danger" href="#">Albañileria</a>
                             </li>
                             <li class="ml-2 col-auto">
-                                <a href="#">Plomeria</a>
+                                <a class="text-danger" href="#">Plomeria</a>
                             </li>
                             <li class="ml-2 col-auto">
-                                <a href="#">Herreria</a>
+                                <a class="text-danger" href="#">Herreria</a>
                             </li>
                             <li class="ml-2 col-auto">
-                                <a href="#">Electrico</a>
+                                <a class="text-danger" href="#">Electrico</a>
                             </li>
                             <li class="ml-2 col-auto">
-                                <a href="#">Aires Acondicionado</a>
+                                <a class="text-danger" href="#">Aires Acondicionado</a>
                             </li>
                         </ul>
 
@@ -125,22 +133,22 @@
 
                       <ul class="dropdown-menu col-md-6" role="menu">
                             <li class="ml-2">
-                                <a href="#">Mecanica</a>
+                                <a class="text-danger" href="#">Mecanica</a>
                             </li>
                             <li class="ml-2">
-                                <a href="#">Albañileria</a>
+                                <a class="text-danger" href="#">Albañileria</a>
                             </li>
                             <li class="ml-2">
-                                <a href="#">Plomeria</a>
+                                <a class="text-danger" href="#">Plomeria</a>
                             </li>
                             <li class="ml-2">
-                                <a href="#">Herreria</a>
+                                <a class="text-danger" href="#">Herreria</a>
                             </li>
                             <li class="ml-2">
-                                <a href="#">Electrico</a>
+                                <a class="text-danger" href="#">Electrico</a>
                             </li>
                             <li class="ml-2">
-                                <a href="#">Aires Acondicionado</a>
+                                <a class="text-danger" href="#">Aires Acondicionado</a>
                             </li>
                         </ul>
 
@@ -153,24 +161,24 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li class="ml-2">
-                                <a href=" {{url('/home')}} ">Ir a cesta</a>
+                                <a class="text-danger" href=" {{url('/home')}} ">Ir a cesta</a>
                             </li>
                             @if (Auth::user())
                             <li class="ml-2">
-                                <a href=" {{url('/admin/products')}} ">Gestionar Empleados</a>
+                                <a class="text-danger" href=" {{url('/admin/products')}} ">Gestionar Empleados</a>
                             </li>
                             <li class="ml-2">
-                                <a href=" {{url('/admin/aspirant')}} ">Gestionar aspirantes</a>
+                                <a class="text-danger" href=" {{url('/admin/aspirant')}} ">Gestionar aspirantes</a>
                             </li>
                             <li class="ml-2">
-                                <a href=" {{url('/admin/products')}} ">Gestionar productos</a>
+                                <a class="text-danger" href=" {{url('/admin/products')}} ">Gestionar productos</a>
                             </li>
                             <li class="ml-2">
-                                <a href=" {{url('/admin/category')}} ">Gestionar Categorias</a>
+                                <a class="text-danger" href=" {{url('/admin/category')}} ">Gestionar Categorias</a>
                             </li>
                             @endif
                             <li class="ml-2">
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                <a class="text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                     {{ __('Cerrar Sesión') }}
                                 </a>
@@ -182,6 +190,8 @@
                             </li>
                         </ul>
                     </li>
+
+                     <li><a href="{{url('/home')}} " class="nav-link"> <i class="material-icons">shopping_cart</i></a></li>
                     @endguest
                 </ul>
             </nav>
@@ -198,7 +208,7 @@
      @include('includes.footerdos')
   </div> <!-- .site-wrap -->
 
-  <script src="{{asset('selling/js/jquery-3.3.1.min.js')}}"></script>
+  <!--<script src="{{asset('selling/js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('selling/js/jquery-migrate-3.0.1.min.js')}}"></script>
   <script src="{{asset('selling/js/jquery-ui.js')}}"></script>
   <script src="{{asset('selling/js/popper.min.js')}}"></script>
@@ -213,61 +223,30 @@
   <script src="{{asset('selling/js/jquery.sticky.js')}}"></script>
 
 
-  <script src="{{asset('selling/js/main.js')}}"></script>
+  <script src="{{asset('selling/js/main.js')}}"></script>-->
 
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript"src="https://openpay.s3.amazonaws.com/openpay.v1.min.js"></script>
-<script type='text/javascript' src="https://openpay.s3.amazonaws.com/openpay-data.v1.min.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-
-        OpenPay.setId('mzdtln0bmtms6o3kck8f');
-        OpenPay.setApiKey('pk_f0660ad5a39f4912872e24a7a660370c');
-        OpenPay.setSandboxMode(true);
-        //Se genera el id de dispositivo
-        var deviceSessionId = OpenPay.deviceData.setup("payment-form", "deviceIdHiddenFieldName");
-
-        $('#pay-button').on('click', function(event) {
-            event.preventDefault();
-            $("#pay-button").prop( "disabled", true);
-            OpenPay.token.extractFormAndCreate('payment-form', sucess_callbak, error_callbak);
-        });
-
-        var sucess_callbak = function(response) {
-          var token_id = response.data.id;
-          $('#token_id').val(token_id);
-          $('#payment-form').submit();
-        };
-
-        var error_callbak = function(response) {
-            var desc = response.data.description != undefined ? response.data.description : response.message;
-            alert("ERROR [" + response.status + "] " + desc);
-            $("#pay-button").prop("disabled", false);
-        };
-
-    });
-</script>
+  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 
 <!--   Core JS Files   -->
 <script src="{{asset('js/calificacion.js')}} " type="text/javascript"></script>
-<script src="{{asset('/js/jquery.min.js') }}" type="text/javascript"></script>
+<!--<script src="{{asset('/js/jquery.min.js') }}" type="text/javascript"></script>-->
 <!-- <script src="{{asset('/js/all.js') }}" type="text/javascript"></script> -->
-<script src="{{asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/material.min.js') }}" type="text/javascript"></script>
+<!--<script src="{{asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{asset('/js/material.min.js') }}" type="text/javascript"></script>-->
 <!--<script src="{{asset('/js/plugins/moment.min.js') }}"></script>-->
 <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-<script src="{{asset('/js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+<!--<script src="{{asset('/js/bootstrap-datepicker.js') }}" type="text/javascript"></script>-->
 <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="{{asset('/js/nouislider.min.js') }}" type="text/javascript"></script>
-<!--  Google Maps Plugin    -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=woZxPTP2zYfPTZyhitZBmI4aY3usK8uGNdbZRx6L9bM="></script> -->
-<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-<script src="{{asset('/js/material-kit.js') }}" type="text/javascript"></script>
-<script
-    src="https://www.paypal.com/sdk/js?client-id=Ae25n5sL9QcXlgxRNUXf-9-elTt5E1bMInP7r_b9sFXMu_WFtZomnWspWotr4GRm0xl2vLyoshMXEsmy">
-</script>
+<!--<script src="{{asset('/js/nouislider.min.js') }}" type="text/javascript"></script>
+<script src="{{asset('/js/material-kit.js') }}" type="text/javascript"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    @stack('scripts')
 
   </body>
 </html>

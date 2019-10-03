@@ -47,16 +47,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group
 	// Route::post('/aspirant','AspirantController@store');
 });
 
-// Paypal
-// Enviamos nuestro pedido a PayPal
-Route::get('payment', array(
-	'as' => 'payment',
-	'uses' => 'PaypalController@postPayment',
-));
-// Después de realizar el pago Paypal redirecciona a esta ruta
-Route::get('payment/status', array(
-	'as' => 'payment.status',
-	'uses' => 'PaypalController@getPaymentStatus',
-));
-
-Route::get('/pagar/order', 'PaypalController@index');
+Route::get('payments', 'PaypalController@index');
+Route::post('/payments/pay', 'PaymentController@pay')->name('pay');
+Route::get('/payments/aprobada', 'PaymentController@aprobada')->name('aprobada');
+Route::get('payments/cancelado', 'PaymentController@cancelado')->name('cancelado');

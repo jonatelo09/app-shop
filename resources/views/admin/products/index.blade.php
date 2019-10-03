@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('title', 'Listado de productos')
 
@@ -14,9 +14,9 @@
         <div class="team">
             <div class="row">
             <div class="container-fluid text-center">
-            <a href=" {{url('/admin/products/create')}} " class="btn btn-primary btn-round">Nuevo Producto</a>
+            <a href=" {{url('/admin/products/create')}} " class="btn btn-primary btn-round mt-1 mb-3">Nuevo Producto</a>
             </div>
-                
+
                 <table class="table">
                     <thead>
                         <tr>
@@ -47,7 +47,7 @@
 
                                     <button type="submit" rel="tooltip" title="Eliminar" class="btn btn-success btn-sm btn-xs"><i class="fa fa-times"></i></button>
                                 </form>
-                                
+
                             </td>
                         </tr>
                         @endforeach

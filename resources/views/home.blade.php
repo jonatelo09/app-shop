@@ -16,14 +16,14 @@
             @endif
             <ul class="nav nav-pills nav-pills-primary" role="tablist">
                 <li class="active">
-                    <a href="#dashboard" role="tab" data-toggle="tab">
-                        <i class="material-icons">shopping_cart</i>
+                    <a class="text-danger" href="#dashboard" role="tab" data-toggle="tab">
+                        <i class="material-icons text-danger">shopping_cart</i>
                         Carrito de compras
                     </a>
                 </li>
-                <li>
-                    <a href="#tasks" role="tab" data-toggle="tab">
-                        <i class="material-icons">list</i>
+                <li class="ml-3">
+                    <a class="text-danger" href="#tasks" role="tab" data-toggle="tab">
+                        <i class="material-icons tex-danger">list</i>
                         Pedidos realizados
                     </a>
                 </li>
@@ -37,8 +37,8 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="text-center">image</th>
-                        <th class="text-center">Name</th>
+                        <th class="text-center">Imagen</th>
+                        <th class="text-center">Nombre</th>
                         <th>Precio</th>
                         <th class="text-center">Cantidad</th>
                         <th>SubTotal</th>
@@ -74,18 +74,21 @@
                     @endforeach
                 </tbody>
             </table>
-            <h2 class="text-right text-primary"><strong>Importe a pagar: $</strong>{{auth()->user()->cart->total}} </h2>
+            <h2 class="text-right text-info"><strong>Importe a pagar: $</strong>{{auth()->user()->cart->total}} </h2>
 
             <div class="text-center">
-                    <!--<a href="{{url('/pagar/order')}} " class="btn btn-primary btn-round">
+                @if(auth()->user()->cart->details->count() > 0)
+                    <a href="{{url('/payments')}} " class="btn btn-primary btn-round">
                         <i class="material-icons">done</i>Relizar pedido
-                    </a>-->
-                <form method="post" action=" {{ url('/order')}} ">
+                    </a>
+                @endif
+
+                <!--<form method="post" action=" {{ url('/order')}} ">
                     @csrf
                     <button class="btn btn-primary btn-round">
                         <i class="material-icons">done</i>Relizar pedido
                     </button>
-                </form>
+                </form>-->
             </div>
         </div>
     </div>

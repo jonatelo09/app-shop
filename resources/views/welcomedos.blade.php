@@ -36,9 +36,9 @@
           @foreach($categories as $categoria)
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary  icon-settings"></span></div>
+              <div class="unit-4-icon mr-4"><span class="text-danger  icon-settings"></span></div>
               <div>
-                <h3><a href="{{url('/categories-dos/'.$categoria->id) }}"> {{$categoria->name}}</a></h3>
+                <h3><a class="text-danger" href="{{url('/categories-dos/'.$categoria->id) }}"> {{$categoria->name}}</a></h3>
                 <p>{{$categoria->description}} </p>
               </div>
             </div>
@@ -107,7 +107,7 @@
         <div class="row mb-5 justify-content-center">
           <form class="form-inline" method="get" action=" {{url('/search')}} ">
                 <input type="text" placeholder="¿Qué producto buscas?" class="typeahead form-control" name="query" id="search">
-                <button class="btn btn-primary btn-just-icon" type="submit">
+                <button class="btn btn-danger btn-just-icon" type="submit">
                     Buscar
                 </button>
             </form>

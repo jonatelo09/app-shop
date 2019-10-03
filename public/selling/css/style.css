@@ -30,12 +30,7 @@ body {
       from { width: 100% }
       to { width:0 }
   }
-.elemento-top{
-  margin-top: 11rem !important;
-}
-.elemento-9{
-  margin-top: 9rem !important;
-}
+
 ::-moz-selection {
   background: #000;
   color: #fff; }

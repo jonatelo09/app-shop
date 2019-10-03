@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('title', 'Registro de productos')
 
@@ -34,7 +34,7 @@
             </div>
           </div>
           </div>
-            
+
 
           <div class="row">
               <div class="col-sm-6">
@@ -65,5 +65,5 @@
       </div>
     </div>
 </div>
-    
+
     @endsection

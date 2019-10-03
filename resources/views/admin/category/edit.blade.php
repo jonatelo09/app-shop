@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('title', 'Registro de categorias')
 
@@ -37,8 +37,8 @@
               <input type="text" class="form-control" name="description" value="{{ old('description',$categori->description) }}">
             </div>
 
-              <button class="btn btn-primary">Guardar Cambios</button>
-              <a href="{{ url('/admin/category')}}" class="btn btn-default">Cancelar</a>
+              <button class="btn btn-success">Guardar Cambios</button>
+              <a href="{{ url('/admin/category')}}" class="btn btn-info">Cancelar</a>
 
         </form>
       </div>

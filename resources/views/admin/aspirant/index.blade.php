@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('title', 'Listado de Aspitantes')
 
@@ -33,10 +33,10 @@
         					<td class="td-actions text-right">
 								<form method="post" action="{{url('/admin/aspirant/'.$aspirant->id.'/delete')}}">
 									@csrf
-                                    
+
 									<button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-sm btn-xs"><i class="fa fa-times"></i></button>
 								</form>
-        						
+
         					</td>
         				</tr>
         				@endforeach

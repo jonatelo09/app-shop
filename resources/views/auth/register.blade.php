@@ -86,7 +86,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-dangers">
                                     {{ __('Register') }}
                                 </button>
                                 <br>
@@ -147,7 +147,7 @@
                 <div class="input-group">
                     <span class="input-group-addon">
                       <i class="material-icons">lock_outline</i>
-                    </span>                  
+                    </span>
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" placeholder="Password Confirmation..." required>
                 </div>
               </div>

@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('title', 'Imagenes de productos')
- 
+
 @section('body-class', 'product-page')
 
 @section('content')
@@ -15,9 +15,9 @@
 
             <form method="post" action="" enctype="multipart/form-data">
                 @csrf
-                <input type="file" name="photo" required>
-                <button type="submit" class="btn btn-primary btn-round">Subir nueva imagen</button>
-                <a href=" {{url('/admin/products')}} " class="btn btn-default btn-round">Regresar</a>
+                <input type="file" name="photo" required><br>
+                <button type="submit" class="btn btn-success btn-round mt-4">Subir nueva imagen</button>
+                <a href=" {{url('/admin/products')}} " class="btn btn-info btn-round mt-4">Regresar</a>
             </form>
             <hr>
             <div class="row">
@@ -31,7 +31,7 @@
                             <form method="post" action="">
                             {{ csrf_field()}}
                             {{method_field('DELETE')}}
-                            <input type="hidden" name="image_id" value="{{ $image->id }}"> 
+                            <input type="hidden" name="image_id" value="{{ $image->id }}">
                             <button type="submit" class="btn btn-danger btn-round">Eliminar</button>
                             @if($image->featured)
                             <button type="button" class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="top" title="Imagen destacada"><i class="material-icons">favorite</i></button>
@@ -39,7 +39,7 @@
                                 <a href=" {{ url('/admin/products/'.$product->id.'/images/select/'.$image->id) }}" class="btn btn-info btn-fab btn-fab-mini btn-round"><i class="material-icons">favorite</i></a>
                                 @endif
                             </form>
-                            
+
                         </div>
                     </div>
                 </div>
