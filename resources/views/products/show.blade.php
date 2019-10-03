@@ -1,35 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.principal')
 
 @section('title', 'App shop | Principal')
 
 @section('body-class', 'profile-page')
-
-@section('styles')
-    <style>
-        .team {
-            padding-bottom: 50px;
-        }
-
-        .team .row .col-md-4 {
-            margin-bottom: 5em;
-        }
-
-        .row{
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .row > [class*='col-']{
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
-@endsection
 @section('content')
-<div class="header header-filter" style="background-image: url('/img/landing-page.jpg');"></div>
+<div class="header header-filter" style="background-image: url('/img/examples/city.jpg');"></div>
 
 <div class="main main-raised">
     <div class="profile-content">
@@ -37,11 +12,12 @@
             <div class="row">
                 <div class="profile">
                     <div class="avatar">
-                        <img src=" {{$category->featured_image_url}} " alt="imagen representativa de la categoria {{$category->name}} "
-                            class="img-circle img-responsive img-raised">
+                        <img src=" {{$product->featured_image_url}} " alt="Circle Image"
+                            class="img-circle img-responsive img-raised"  >
                     </div>
                     <div class="name">
-                        <h3 class="title"> {{ $category->name}} </h3>
+                        <h3 class="title"> {{ $product->name}} </h3>
+                        <h6> {{$product->category->name}} </h6>
                     </div>
                 </div>
             </div>
@@ -51,26 +27,49 @@
             </div>
             @endif
             <div class="description text-center">
-                <p> {{$category->description}}
+                <p> {{$product->long_description}}
                 </p>
             </div>
+            <div class="text-center">
+                @if(auth()->check())
+                <button class="btn btn-danger btn-round" data-toggle="modal" data-target="#ModalAddCar">
+                    <i class="material-icons">add</i>Añadir al Carrito
+                </button>
+                @else
+                    <a href="{{url('/login?redirect_to='.url()->current()) }} " class="btn btn-danger btn-round">
+                        <i class="material-icons">add</i>Añadir al Carrito
+                    </a>
+                @endif
+                <a href="{{url('/home')}}" class="btn btn-default btn-round" >
+                    <i class="material-icons">shopping_cart</i>Ir a Cesta
+                </a>
+            </div>
 
-            <div class="team text-center">
-                <div class="row">
-                    @foreach ($products as $product)
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <img src=" {{ $product->featured_image_url }} " alt="Thumbnail Image" class="img-raised img-circle" style=" with: 250px">
-                                <h3 class="title"><a href=" {{url('/products/'.$product->id) }} "> {{ $product->name }}</a> <br />
-                                </h3>
-                                <h2 class="text-info">${{$product->price}} </h2>
-                                <p class="description"> {{$product->description}} </p>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="profile-tabs">
+                        <div class="nav-align-center">
+
+                            <div class="tab-content gallery">
+                                <div class="tab-pane active" id="studio">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            @foreach ($imagesLeft as $image)
+                                            <img src=" {{ $image->url }} " class="img-rounded">
+                                            @endforeach
+                                        </div>
+                                        <div class="col-md-6">
+                                            @foreach ($imagesRigth as $image)
+                                            <img src=" {{ $image->url }} " class="img-rounded">
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                    @endforeach
-                </div>
-                <div class="text-center">
-                    {{ $products->links() }}
+                    </div>
+                    <!-- End Profile Tabs -->
                 </div>
             </div>
 
@@ -78,7 +77,7 @@
     </div>
 </div>
 
-<!-- Modal Añadir a carrito-->
+<!-- Modal Añadir a carrito -->
 <div class="modal fade" id="ModalAddCar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

@@ -40,6 +40,9 @@
           </div>
           @endforeach
         </div>
+        <div class="text-center">
+            {{ $products->links() }}
+        </div>
       </div>
     </div>
 <!-- Modal Añadir a carrito -->

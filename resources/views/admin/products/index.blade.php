@@ -39,7 +39,7 @@
                             <td class="td-actions text-right">
                                 <form method="post" action="{{url('/admin/products/'.$product->id.'/delete')}}">
                                     @csrf
-                                    <a href=" {{url('/products/'.$product->id)}} " rel="tooltip" title="ver detalles" class="btn btn-info btn-sm btn-xs"> <i class="fa fa-info" target="_blank"></i></a>
+                                    <a href=" {{url('/products-dos/'.$product->id)}} " rel="tooltip" title="ver detalles" class="btn btn-info btn-sm btn-xs"> <i class="fa fa-info" target="_blank"></i></a>
 
                                     <a href="{{url('/admin/products/'.$product->id.'/edit')}}" rel="tooltip" title="Editar producto" class="btn btn-success btn-sm btn-xs"> <i class="fa fa-edit"></i></a>
 
