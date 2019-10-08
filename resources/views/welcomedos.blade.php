@@ -502,27 +502,26 @@
           <div class="col-md-7 mb-5">
 
 
-
-            <form method="POST" action="{{url('/admin/aspirant')}}" class="p-5 bg-white">
-
+            <form method="POST" action="{{url('/admin/aspirant')}}" class="p-5 bg-white contact-form">
+              @csrf
               <h2 class="h4 text-black mb-5">Escribe tus Datos</h2>
 
               <div class="row form-group">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">Nombre</label>
-                  <input type="text" id="fname" class="form-control rounded-0">
+                <div class="col-md-12">
+                  <label class="text-black" for="fname">Nombre Completo</label>
+                  <input type="text" id="fname" name="nameFull" class="form-control rounded-0">
                 </div>
-                <div class="col-md-6">
+                <!--<div class="col-md-6">
                   <label class="text-black" for="lname">Apellido</label>
                   <input type="text" id="lname" class="form-control rounded-0">
-                </div>
+                </div>-->
               </div>
 
               <div class="row form-group">
 
                 <div class="col-md-12">
                   <label class="text-black" for="email">Email</label>
-                  <input type="email" id="email" class="form-control rounded-0">
+                  <input type="email" id="email" name="email" class="form-control rounded-0">
                 </div>
               </div>
 
@@ -530,14 +529,14 @@
 
                 <div class="col-md-12">
                   <label class="text-black" for="phone">Telefono</label>
-                  <input type="tel" id="phone" class="form-control rounded-0">
+                  <input type="tel" id="phone" name="phone" class="form-control rounded-0">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="text-black" for="message">Oficio(s)</label>
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="Escribe Tus Oficios que Dominas..."></textarea>
+                  <label class="text-black" for="oficio">Oficio(s)</label>
+                  <textarea id="oficio" name="oficio" cols="30" rows="7" class="form-control rounded-0" placeholder="Escribe Tus Oficios que Dominas..."></textarea>
                 </div>
               </div>
 
@@ -546,8 +545,6 @@
                   <input type="submit" value="Enviar" class="btn btn-danger rounded-0 py-3 px-4">
                 </div>
               </div>
-
-
             </form>
           </div>
 

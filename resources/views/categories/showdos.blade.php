@@ -25,6 +25,7 @@
                 <div class="mb-3">
                   <span class="meta-icons mr-3"><a href="#" type="button" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter"><span class="icon-star text-warning"></span></a> 5.0</span>
                 </div>
+                 <h3 class="mb-4">${{ $product->price }} </h3>
                 <p class="mb-4">{{ $product->description }} </p>
                 <div>
                   @if(auth()->check())

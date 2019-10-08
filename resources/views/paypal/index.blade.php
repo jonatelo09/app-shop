@@ -18,12 +18,11 @@
                                 <label>Cantidad a Pagar:</label>
                                 <input
                                     type="number"
-                                    min="5"
-                                    step="0.01"
                                     class="form-control"
                                     name="value"
-                                    value="{{ mt_rand(500, 100000) / 100 }}"
+                                    value="{{ auth()->user()->cart->total }}"
                                     required
+                                    readonly="readonly"
                                 >
                                 <!--<small class="form-text text-muted">
                                     Use values with up to two decimal positions, using dot "."

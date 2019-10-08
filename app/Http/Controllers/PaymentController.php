@@ -22,11 +22,21 @@ class PaymentController extends Controller {
 		$paymentPlatform = resolve(PayPalService::class);
 
 		return $paymentPlatform->handlePayment($request);
+
 	}
 
 	public function aprobada() {
 
 		$paymentPlatform = resolve(PayPalService::class);
+
+		$client = auth()->user();
+		$cart = $client->cart;
+		$cart->status = 'Pendiente';
+		$cart->oreder_date = Carbon::now();
+		$cart->save();
+
+		$admins = User::where('admin', true)->get();
+		Mail::to($admins)->send(new NewOrder($client, $cart));
 
 		return $paymentPlatform->handleAprobada();
 	}

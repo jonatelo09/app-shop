@@ -164,7 +164,7 @@
                             <li class="ml-2">
                                 <a class="text-danger" href=" {{url('/home')}} ">Ir a cesta</a>
                             </li>
-                            @if (Auth::user())
+                            @if (Auth::user()->admin)
                             <li class="ml-2">
                                 <a class="text-danger" href=" {{url('/admin/products')}} ">Gestionar Empleados</a>
                             </li>
@@ -176,6 +176,9 @@
                             </li>
                             <li class="ml-2">
                                 <a class="text-danger" href=" {{url('/admin/category')}} ">Gestionar Categorias</a>
+                            </li>
+                            <li class="ml-2">
+                                <a class="text-danger" href=" {{url('/admin/user')}} ">Gestionar Usuarios</a>
                             </li>
                             @endif
                             <li class="ml-2">

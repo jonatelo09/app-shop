@@ -2,7 +2,7 @@
 Route::get('/', 'TestController@welcome');
 Route::get('/principaldos', 'TestController@welcomedos');
 Route::get('/principal', 'TestController@principal');
-Route::get('/admin/aspirant', 'AspirantController@index');
+
 Route::post('/admin/aspirant', 'AspirantController@store');
 
 Auth::routes();
@@ -45,8 +45,16 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group
 	Route::post('/category/{id}/edit', 'CategoryController@update'); //actualizar
 	Route::post('/category/{id}/delete', 'CategoryController@destroy'); // form eliminar
 
-	// Route::post('/aspirant','AspirantController@store');
+	//Route::post('/aspirant', 'AspirantController@store');
+	Route::get('/aspirant', 'AspirantController@index');
+
+	Route::get('/user', 'UserController@index');
+
 });
+
+/*Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Auth')->group(function () {
+Route::get('/user', 'RegisterController@mostrarUsuarios'); //listado
+});*/
 
 Route::get('payments', 'PaypalController@index');
 Route::post('/payments/pay', 'PaymentController@pay')->name('pay');
