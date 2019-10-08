@@ -12,7 +12,7 @@ class CreatePaymentPlatformsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('payment_platforms', function (Blueprint $table) {
-			$table->bigIncrements('id');
+			$table->increments('id');
 			$table->string('name', 60);
 			$table->string('image');
 			$table->timestamps();

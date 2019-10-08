@@ -12,7 +12,7 @@ class CreateComentariesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('comentaries', function (Blueprint $table) {
-			$table->bigIncrements('id');
+			$table->increments('id');
 			$table->string('description', 255);
 
 			//FK

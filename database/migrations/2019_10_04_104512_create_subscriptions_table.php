@@ -12,7 +12,7 @@ class CreateSubscriptionsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('subscriptions', function (Blueprint $table) {
-			$table->bigIncrements('id');
+			$table->increments('id');
 			$table->string('email')->unique();
 			$table->timestamps();
 		});
