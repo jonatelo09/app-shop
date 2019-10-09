@@ -2,7 +2,7 @@
 Route::get('/', 'TestController@welcome');
 Route::get('/principaldos', 'TestController@welcomedos');
 Route::get('/principal', 'TestController@principal');
-
+Route::post('/subscriptions', 'SubscriptionController@store');
 Route::post('/admin/aspirant', 'AspirantController@store');
 
 Auth::routes();

@@ -8,12 +8,12 @@
 
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
 
-            <div class="row mb-4">
+            <div class="row mb-2">
               <div class="col-md-7">
-                <h1>Agenda tu Talacha</h1>
+                <h1 class="text-cursiva">Agenda tu Talacha</h1>
                 <p class="mb-5 lead">Contamos con un catalogo de servicos como son mecanicos, plomeria, albañileria, diligenciero.</p>
                 <div>
-                  <a href="#" class="btn btn-danger btn-outline-white py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
+                  <a href="#services-section" class="btn btn-danger btn-outline-white py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
                   <a href="{{ route('register')}}" class="btn btn-white py-3 px-5 rounded-5 d-block d-sm-inline-block">Registrate</a>
                 </div>
               </div>
@@ -199,11 +199,12 @@
       <div class="container">
 
         <div class="row align-items-center justify-content-center">
-          <form class="col-md-7" method="post">
+          <form action="/subscriptions" class="col-md-7" method="post">
+            @csrf
             <h2>Reciba notificaciones de las actualizaciones</h2>
             <div class="d-flex mb-4">
-              <input type="text" class="form-control rounded-0" placeholder="Ingresa tu direccion de correo...">
-              <input type="submit" class="btn btn-danger btn-outline-white rounded-5" value="Subscribete">
+              <input id="email" name="email" type="text" class="form-control" placeholder="Ingresa tu direccion de correo...">
+              <button type="submit" class="btn btn-danger btn-outline-white rounded-5">Suscribete</button>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>
           </form>
@@ -273,7 +274,7 @@
     </div>
 
 
-    <div class="site-section" id="about-section">
+    <!--<div class="site-section" id="about-section">
       <div class="container">
         <div class="row align-items-lg-center">
           <div class="col-md-8 mb-5 mb-lg-0 position-relative">
@@ -291,11 +292,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
 
 
-    <div class="site-section border-bottom" id="team-section">
+    <!--<div class="site-section border-bottom" id="team-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
@@ -348,9 +349,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
-    <div class="site-blocks-cover overlay get-notification" id="special-section" style="background-image: url({{asset('selling/images/hero2.jpg')}}); background-attachment: fixed; background-position: top;" data-aos="fade">
+    <!--<div class="site-blocks-cover overlay get-notification" id="special-section" style="background-image: url({{asset('selling/images/hero2.jpg')}}); background-attachment: fixed; background-position: top;" data-aos="fade">
       <div class="container">
 
         <div class="row align-items-center justify-content-center">
@@ -366,11 +367,11 @@
         </div>
 
       </div>
-    </div>
+    </div>-->
 
 
 
-    <div class="site-section testimonial-wrap" id="testimonials-section">
+    <!--<div class="site-section testimonial-wrap" id="testimonials-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
@@ -441,11 +442,11 @@
           </div>
 
         </div>
-    </div>
+    </div>-->
 
 
 
-    <div class="site-section" id="blog-section">
+    <!--<div class="site-section" id="blog-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
@@ -485,12 +486,12 @@
 
         </div>
       </div>
-    </div>
+    </div>-->
 
 
 
 
-    <div class="site-section bg-light" id="contact-section">
+    <div class="site-section bg-light border-bottom" id="contact-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">

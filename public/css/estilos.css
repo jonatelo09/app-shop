@@ -25,6 +25,9 @@ body {
     padding: 0;
     width: 100%;
 }
+.text-cursiva{
+    font-family: 'Lobster', cursive !important;
+}
 strong {
 	font-weight: 700;
 }

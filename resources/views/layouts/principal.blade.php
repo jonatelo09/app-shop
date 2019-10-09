@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('selling/fonts/icomoon/style.css')}}">
 
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
     <!--<link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('selling/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('selling/css/owl.carousel.min.css')}}">
@@ -82,8 +84,8 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2 contenedor">
-            <h1 class="mb-0 site-logo maquina"><a href="{{url('/')}} " class="text-black mb-0 parpadeo"><span class="text-danger  icon-format_size"></span>
-              Talachaz<span class="text-danger">.</span>com <span class="maquina-esc">&#160;</span> </a></h1>
+            <h1 class="mb-0 site-logo"><a href="{{url('/')}} " class="text-black mb-0 text-cursiva"><!--<span class="text-danger  icon-format_size"></span>-->
+              Talachaz<span class="text-danger">.</span>com <!--<span class="">&#160;</span>--> </a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">

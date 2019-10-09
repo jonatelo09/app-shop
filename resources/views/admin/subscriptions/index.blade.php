@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 
-@section('title', 'Listado de Aspitantes')
+@section('title', 'Listado de Subscripciones')
 
 @section('body-class', 'product-page')
 
@@ -14,22 +14,18 @@
         		<table class="table">
         			<thead>
         				<tr>
-        					<th class="col-md-2 text-center">Nombre</th>
+        					<th class="col-md-2 text-center">ID</th>
         					<th class="col-md-5 text-center">Email</th>
-                            <th class="text-center">Telefono</th>
-                            <th class="text-center">Oficio</th>
                             <th class="text-right">Opciones</th>
         				</tr>
         			</thead>
         			<tbody>
-        				@foreach( $aspirantes as $aspirant)
+        				@foreach( $subscriptions as $subscription)
         				<tr>
-        					<td>{{ $aspirant->nameFull}}</td>
-        					<td>{{ $aspirant->email}}</td>
-                            <td class="text-center">{{ $aspirant->phone}}</td>
-                            <td class="text-center">{{ $aspirant->oficio}}</td>
+        					<td>{{ $subscription->id}}</td>
+        					<td>{{ $subscription->email}}</td>
         					<td class="td-actions text-right">
-								<form method="post" action="{{url('/admin/aspirant/'.$aspirant->id.'/delete')}}">
+								<form method="post" action="{{url('/admin/subscription/'.$subscription->id.'/delete')}}">
 									@csrf
 
 									<button type="submit" rel="tooltip" title="Eliminar" class="btn btn-danger btn-sm btn-xs"><i class="fa fa-times"></i></button>
@@ -40,7 +36,7 @@
         				@endforeach
         			</tbody>
         		</table>
-                {{$aspirantes->links()}}
+                {{$subscriptions->links()}}
         	</div>
       	</div><!-- end team -->
       </div><!-- end section -->

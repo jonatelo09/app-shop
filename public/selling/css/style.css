@@ -8,6 +8,10 @@ body {
   .contenedor {
     margin: auto;
   }
+
+  .text-cursiva{
+    font-family: 'Lobster', cursive !important;
+}
   
   .maquina { 
     position: relative; 

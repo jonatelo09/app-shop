@@ -10,7 +10,7 @@
           <div class="col-md-3 ">
             <h2 class="footer-heading mb-4">Enlaces</h2>
             <ul class="list-unstyled">
-              <li><a href="#">Nosotros</a></li>
+              <li><a href="/#contact-section">Nosotros</a></li>
               <li><a href="#">Servicios</a></li>
               <li><a href="#">Contactos</a></li>
             </ul>
