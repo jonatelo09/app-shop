@@ -13,7 +13,7 @@
         <div class="bg-white py-4 mb-4 elemento-9">
           <div class="row mx-4 my-4 product-item-2 align-items-start">
             <div class="col-md-6 mb-5 mb-md-0">
-              <img src="{{$product->featured_image_url}}" alt="Image" class="img-fluid">
+              <img src="{{$product->featured_image_url}}" alt="Image" class="img-fluid" style="width: 450px; height: 300;">
             </div>
 
             <div class="col-md-5 ml-auto product-title-wrap">

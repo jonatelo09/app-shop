@@ -32,6 +32,14 @@
                 <input type="file" name="image">
             </div>
           </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group label-floating">
+                <label class="control-label">Icono de la categoria</label>
+                <input type="text" class="form-control" name="icono" value="{{old('icono', $categori->icono)}}">
+              </div>
+            </div>
+          </div>
             <div class="form-group label-floating">
               <label class="control-label">Descripcion corta de la categoria</label>
               <input type="text" class="form-control" name="description" value="{{ old('description',$categori->description) }}">

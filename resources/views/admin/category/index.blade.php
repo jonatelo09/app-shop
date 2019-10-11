@@ -20,6 +20,7 @@
         					<th class="col-md-2 text-center">Nombre</th>
         					<th class="col-md-5">Description</th>
                             <th>Imagen</th>
+                            <th>Icono</th>
                             <th class="text-right">Opciones</th>
         				</tr>
         			</thead>
@@ -28,9 +29,11 @@
         				<tr>
         					<td>{{ $categori->name}}</td>
         					<td>{{ $categori->description}}</td>
+
                             <td>
                                 <img src=" {{ $categori->featured_image_url }} " height="50">
                             </td>
+                            <td><span class="text-danger {{ $categori->icono}}"></span> </td>
         					<td class="td-actions text-right">
 								<form method="post" action="{{url('/admin/category/'.$categori->id.'/delete')}}">
 									@csrf

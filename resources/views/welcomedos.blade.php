@@ -36,7 +36,7 @@
           @foreach($categories as $categoria)
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-danger  icon-settings"></span></div>
+              <div class="unit-4-icon mr-4"><span class="text-danger {{ $categoria->icono }} "></span></div>
               <div>
                 <h3><a class="text-danger" href="{{url('/categories-dos/'.$categoria->id) }}"> {{$categoria->name}}</a></h3>
                 <p>{{$categoria->description}} </p>
@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div class="site-section" id="products-section">
+    <!-- <div class="site-section" id="products-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <form class="form-inline" method="get" action=" {{url('/search')}} ">
@@ -146,7 +146,7 @@
           @endforeach
         </div>
       </div>
-    </div>
+    </div> -->
 
     @if(auth()->User())
     <!-- Modal -->
@@ -195,7 +195,7 @@
       </div>
     </div>
     @endif
-    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="background-image: url({{asset('selling/images/hero2.jpg')}}); background-attachment: fixed;" data-aos="fade">
+    <!-- <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="background-image: url({{asset('selling/images/hero2.jpg')}}); background-attachment: fixed;" data-aos="fade">
       <div class="container">
 
         <div class="row align-items-center justify-content-center">
@@ -211,7 +211,7 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
     <div class="site-section bg-light">
       <div class="container">
@@ -225,7 +225,7 @@
         <div class="bg-white py-4 mb-4">
           <div class="row mx-4 my-4 product-item-2 align-items-start">
             <div class="col-md-6 mb-5 mb-md-0">
-              <img src="images/mecanica.jpg" alt="Image" class="img-fluid">
+              <img src="{{asset('selling/images/mecanica.jpg')}}" alt="Image" class="img-fluid">
             </div>
 
             <div class="col-md-5 ml-auto product-title-wrap">
