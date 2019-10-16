@@ -17,7 +17,7 @@
             <div class="product-item">
             	<a href="{{url('/products-dos/'.$product->id) }}">
 	              <figure>
-	                <img src="{{ $product->featured_image_url }}" alt="Image" class="img-fluid" style="width: 450px; height: 300px;">
+	                <img src="{{ $product->featured_image_url }}" alt="Image" class="img-fluid" style="width: 250px; height: 250px;">
 	              </figure>
               	</a>
               <div class="px-4">

@@ -1995,6 +1995,10 @@ textarea.form-control {
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
+.btn-maestro {
+  color: #212529;
+  background-color: #46ddb0;
+  border-color: #46ddb0; }
 
 .btn-primary {
   color: #212529;

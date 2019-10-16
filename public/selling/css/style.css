@@ -5,10 +5,23 @@ body {
   font-weight: 400;
   font-size: 1rem; }
 
+  .elemento-9{
+    margin-top: 9rem!important;
+  }
+  .elemento-2{
+    margin-top: 9rem!important;
+  }
   .contenedor {
     margin: auto;
   }
-
+  .btn-master2{
+    background-color: #273735;
+    color: #fff;
+  }
+  .btn-master2:hover{
+    background-color: #626f6d;
+    color: #fff;
+  }
   .text-cursiva{
     font-family: 'Lobster', cursive !important;
 }

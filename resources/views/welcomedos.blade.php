@@ -7,14 +7,22 @@
         <div class="row align-items-center justify-content-center">
 
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
-
             <div class="row mb-2">
-              <div class="col-md-7">
-                <h1 class="text-cursiva">Agenda tu Talacha</h1>
-                <p class="mb-5 lead">Contamos con un catalogo de servicos como son mecanicos, plomeria, albañileria, diligenciero.</p>
-                <div>
-                  <a href="#services-section" class="btn btn-danger btn-outline-white py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
-                  <a href="{{ route('register')}}" class="btn btn-white py-3 px-5 rounded-5 d-block d-sm-inline-block">Registrate</a>
+              <div class="card col-md-7">
+                <h1 class="text-cursiva text-dark">Agenda tu Talacha</h1>
+                <h3 class="bm-5 lead text-dark">En Talachaz.com puedes: </h3>
+                <ul>
+                  <li class="text-capitalize">Explorar mas de 500 servicios</li>
+                  <li class="text-capitalize">Encontrar servicios de Mecánica automotriz y de motos.</li>
+                  <li class="text-capitalize">Agendar Servicios express ha un bajo costo</li>
+                  <li class="text-capitalize">personal capacitado para realizar tus talachaz</li>
+                  <li class="text-capitalize">Calidad de atencion a clientes.</li>
+                </ul>
+                <!-- <p class="mb-5 lead text-dark">
+                  <ul><li>hola</li></ul></p> -->
+                <div class="mt-2 mb-4">
+                  <a href="#services-section" class="btn btn-master2 btn-outline-white py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
+                  <a href="{{ route('register')}}" class="btn btn-info py-3 px-5 rounded-5 d-block d-sm-inline-block">Registrate</a>
                 </div>
               </div>
             </div>
@@ -274,25 +282,25 @@
     </div>
 
 
-    <!--<div class="site-section" id="about-section">
+    <div class="site-section" id="about-section">
       <div class="container">
         <div class="row align-items-lg-center">
           <div class="col-md-8 mb-5 mb-lg-0 position-relative">
-            <img src="{{asset('selling/images/about_1.jpg')}}" class="img-fluid" alt="Image">
+            <img src="{{asset('selling/images/nosotros.png')}}" class="img-fluid" alt="Image">
             <div class="experience">
-              <span class="year">Trusted Merchant</span>
-              <span class="caption">for 50 years</span>
+              <span class="year">Empresa Confiable</span>
+              <span class="caption">Más de 50 años en el mercado</span>
             </div>
           </div>
           <div class="col-md-3 ml-auto">
-            <h3 class="section-sub-title">Merchant Company</h3>
-            <h2 class="section-title mb-3">About Us</h2>
+            <h3 class="section-sub-title"></h3>
+            <h2 class="section-title mb-3">Nosotros</h2>
             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat blanditiis nihil, consectetur. Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius vero vel!</p>
             <p><a href="#" class="btn btn-black btn-black--hover rounded-0">Learn More</a></p>
           </div>
         </div>
       </div>
-    </div>-->
+    </div>
 
 
 

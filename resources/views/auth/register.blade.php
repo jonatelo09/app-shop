@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 @section('content')
-<div class="container elemento-top">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card elemento-2">

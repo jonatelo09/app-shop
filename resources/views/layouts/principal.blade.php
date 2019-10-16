@@ -18,7 +18,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 
-    <!--<link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}">
+    <!-- <link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}"> -->
     <link rel="stylesheet" href="{{asset('selling/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('selling/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('selling/css/owl.theme.default.min.css')}}">
@@ -30,17 +31,17 @@
 
     <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
 
-    <link rel="stylesheet" href="{{asset('selling/css/aos.css')}}">-->
+    <link rel="stylesheet" href="{{asset('selling/css/aos.css')}}">
 
     <link rel="stylesheet" href="{{asset('selling/css/style.css')}}">
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    @stack('styles')
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    @stack('styles') -->
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -56,7 +57,7 @@
       <div class="site-mobile-menu-body"></div>
     </div>
 
-    <div class=" py-1 bg-light" id="home-section">
+    <!-- <div class=" py-1 bg-light" id="home-section">
       <div class="container">
         <div class="row align-items-center">
 
@@ -77,7 +78,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
 
@@ -94,7 +95,7 @@
                     @guest
                     <li><a href="{{url('/')}} " class="nav-link">Home</a></li>
 
-                    <li class="dropdown nav-link">
+                    <!-- <li class="dropdown nav-link">
                       <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Categorias<span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu" role="menu">
@@ -118,7 +119,8 @@
                             </li>
                         </ul>
 
-                    </li>
+                    </li> -->
+                    <li><a href="#services-section" class="nav-link">Categorias</a></li>
 
                     <li><a href="#about-section" class="nav-link">Nosotros</a></li>
                     <!--<li><a href="#special-section" class="nav-link">Special</a></li>
@@ -215,7 +217,7 @@
      @include('includes.footerdos')
   </div> <!-- .site-wrap -->
 
-  <!--<script src="{{asset('selling/js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{asset('selling/js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{asset('selling/js/jquery-migrate-3.0.1.min.js')}}"></script>
   <script src="{{asset('selling/js/jquery-ui.js')}}"></script>
   <script src="{{asset('selling/js/popper.min.js')}}"></script>
@@ -230,30 +232,30 @@
   <script src="{{asset('selling/js/jquery.sticky.js')}}"></script>
 
 
-  <script src="{{asset('selling/js/main.js')}}"></script>-->
+  <script src="{{asset('selling/js/main.js')}}"></script>
 
 
   <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 
 <!--   Core JS Files   -->
 <script src="{{asset('js/calificacion.js')}} " type="text/javascript"></script>
-<!--<script src="{{asset('/js/jquery.min.js') }}" type="text/javascript"></script>-->
-<!-- <script src="{{asset('/js/all.js') }}" type="text/javascript"></script> -->
-<!--<script src="{{asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/material.min.js') }}" type="text/javascript"></script>-->
-<!--<script src="{{asset('/js/plugins/moment.min.js') }}"></script>-->
-<!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-<!--<script src="{{asset('/js/bootstrap-datepicker.js') }}" type="text/javascript"></script>-->
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<!--<script src="{{asset('/js/nouislider.min.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/material-kit.js') }}" type="text/javascript"></script>-->
+<!-- <script src="{{asset('/js/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{asset('/js/all.js') }}" type="text/javascript"></script>
+<script src="{{asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{asset('/js/material.min.js') }}" type="text/javascript"></script>
+<script src="{{asset('/js/plugins/moment.min.js') }}"></script>
+Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker
+<script src="{{asset('/js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+<script src="{{asset('/js/nouislider.min.js') }}" type="text/javascript"></script>
+<script src="{{asset('/js/material-kit.js') }}" type="text/javascript"></script> -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    @stack('scripts')
+    @stack('scripts') -->
 
   </body>
 </html>
