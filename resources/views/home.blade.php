@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="main main-raised">
-    <div class="container elemento-9">
+    <div class="container">
         <div class="section">
             <h2 class="title text-center">Carrito</h2>
             @if (session('notification'))
