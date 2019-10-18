@@ -21,7 +21,7 @@
                 <!-- <p class="mb-5 lead text-dark">
                   <ul><li>hola</li></ul></p> -->
                 <div class="mt-2 mb-4">
-                  <a href="#services-section" class="btn btn-master2 btn-outline-white py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
+                  <a href="#services-section" class="btn btn-danger btn-outline-white py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
                   <a href="{{ route('register')}}" class="btn btn-info py-3 px-5 rounded-5 d-block d-sm-inline-block">Registrate</a>
                 </div>
               </div>

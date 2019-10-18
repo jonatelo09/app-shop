@@ -18,22 +18,22 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/bootstrap.min.css')}}">
     <!-- <link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}"> -->
-    <link rel="stylesheet" href="{{asset('selling/css/jquery-ui.css')}}">
-    <link rel="stylesheet" href="{{asset('selling/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('selling/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('selling/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/jquery-ui.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/owl.theme.default.min.css')}}">
 
-    <link rel="stylesheet" href="{{asset('selling/css/jquery.fancybox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/jquery.fancybox.min.css')}}">
 
-    <link rel="stylesheet" href="{{asset('selling/css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/bootstrap-datepicker.css')}}">
 
     <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
 
-    <link rel="stylesheet" href="{{asset('selling/css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/aos.css')}}">
 
-    <link rel="stylesheet" href="{{asset('selling/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css_II/style.css')}}">
 
     <!-- Fonts -->
     <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -80,14 +80,15 @@
       </div>
     </div> -->
 
-    <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
+    <header class="site-navbar py-2 bg-white js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2 contenedor">
-            <h1 class="mb-0 site-logo"><a href="{{url('/')}} " class="text-black mb-0 text-cursiva"><!--<span class="text-danger  icon-format_size"></span>-->
-              Talachaz<span class="text-danger">.</span>com <!--<span class="">&#160;</span>--> </a></h1>
+            <!-- <h1 class="mb-0 site-logo"><a href="{{url('/')}} " class="text-black mb-0 text-cursiva"><span class="text-danger  icon-format_size"></span>
+              Talachaz<span class="text-danger">.</span>com <span class="">&#160;</span> </a></h1> -->
+            <h1 class="mb-0 site-logo"><a href="{{url('/')}} " class="text-black mb-0 text-cursiva"><img class="text-danger mt-1" src="{{url('img/talachas.svg')}} "></a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -217,22 +218,22 @@
      @include('includes.footerdos')
     </div> <!-- .site-wrap -->
 
-  <script src="{{asset('selling/js/jquery-3.3.1.min.js')}}"></script>
-  <script src="{{asset('selling/js/jquery-migrate-3.0.1.min.js')}}"></script>
-  <script src="{{asset('selling/js/jquery-ui.js')}}"></script>
-  <script src="{{asset('selling/js/popper.min.js')}}"></script>
-  <script src="{{asset('selling/js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('selling/js/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('selling/js/jquery.stellar.min.js')}}"></script>
-  <script src="{{asset('selling/js/jquery.countdown.min.js')}}"></script>
-  <script src="{{asset('selling/js/bootstrap-datepicker.min.js')}}"></script>
-  <script src="{{asset('selling/js/jquery.easing.1.3.js')}}"></script>
-  <script src="{{asset('selling/js/aos.js')}}"></script>
-  <script src="{{asset('selling/js/jquery.fancybox.min.js')}}"></script>
-  <script src="{{asset('selling/js/jquery.sticky.js')}}"></script>
+  <script src="{{asset('js_II/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{asset('js_II/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{asset('js_II/jquery-ui.js')}}"></script>
+  <script src="{{asset('js_II/popper.min.js')}}"></script>
+  <script src="{{asset('js_II/bootstrap.min.js')}}"></script>
+  <script src="{{asset('js_II/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('js_II/jquery.stellar.min.js')}}"></script>
+  <script src="{{asset('js_II/jquery.countdown.min.js')}}"></script>
+  <script src="{{asset('js_II/bootstrap-datepicker.min.js')}}"></script>
+  <script src="{{asset('js_II/jquery.easing.1.3.js')}}"></script>
+  <script src="{{asset('js_II/aos.js')}}"></script>
+  <script src="{{asset('js_II/jquery.fancybox.min.js')}}"></script>
+  <script src="{{asset('js_II/jquery.sticky.js')}}"></script>
 
 
-  <script src="{{asset('selling/js/main.js')}}"></script>
+  <script src="{{asset('js_II/main.js')}}"></script>
 
 
   <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
