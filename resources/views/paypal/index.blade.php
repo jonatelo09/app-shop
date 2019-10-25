@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card elemento-2">
+            <div class="card elemento-7">
                 <div class="card-header text-center">Pago de Talacha</div>
 
                 <div class="card-body">

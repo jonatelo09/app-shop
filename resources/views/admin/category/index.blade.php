@@ -9,8 +9,8 @@
 </div>
   <div class="main main-raised">
     <div class="container">
-      <div class="section text-center">
-        <h2 class="title">Categorias Disponibles</h2>
+      <div class="site-section text-center">
+        <h2 class="title elemento-4">Categorias Disponibles</h2>
         <div class="team">
         	<div class="row">
         		<a href=" {{url('/admin/category/create')}} " class="btn btn-primary btn-round">Nueva Categoria</a>

@@ -9,10 +9,11 @@
 </div>
 <div class="main main-raised">
     <div class="container">
-      <div class="section text-center">
-        <h2 class="title">Productos Disponibles</h2>
+      <div class="site-section text-center">
+
         <div class="team">
-            <div class="row">
+            <div class="row elemento-4">
+            <h2 class="title">Productos Disponibles</h2>
             <div class="container-fluid text-center">
             <a href=" {{url('/admin/products/create')}} " class="btn btn-primary btn-round mt-1 mb-3">Nuevo Producto</a>
             </div>

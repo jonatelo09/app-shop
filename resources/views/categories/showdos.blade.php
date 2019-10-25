@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="site-section" id="products-section">
-      <div class="container elemento-9">
+      <div class="container elemento-4">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
             <h2 class="section-title mb-3">{{ $category->name}}</h2>

@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card elemento-2">
+            <div class="card elemento-9">
                 @if ($errors->any())
                 <div class="alert alert-danger">
                   <ul>

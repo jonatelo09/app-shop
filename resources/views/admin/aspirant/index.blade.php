@@ -7,8 +7,8 @@
 @section('content')
   <div class="main main-raised">
     <div class="container">
-      <div class="section text-center">
-        <h2 class="title">Aspirantes Postulados</h2>
+      <div class="site-section text-center">
+        <h2 class="title elemento-4">Aspirantes Postulados</h2>
         <div class="team">
         	<div class="row">
         		<table class="table">

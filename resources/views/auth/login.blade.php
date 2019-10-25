@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card elemento-9">
+                <div class="card elemento-6">
                     <div class="card-header text-center">{{ __('Iniciar Sesión') }}</div>
 
                     <div class="card-body">

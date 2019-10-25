@@ -5,10 +5,31 @@ body {
   font-weight: 400;
   font-size: 1rem; }
 
-  .elemento-9{
-    margin-top: 9rem!important;
+  .elemento-1{
+    margin-top: 1rem!important;
   }
   .elemento-2{
+    margin-top: 2rem!important;
+  }
+  .elemento-3{
+    margin-top: 3rem!important;
+  }
+  .elemento-4{
+    margin-top: 4rem!important;
+  }
+  .elemento-5{
+    margin-top: 5rem!important;
+  }
+  .elemento-6{
+    margin-top: 6rem!important;
+  }
+  .elemento-7{
+    margin-top: 7rem!important;
+  }
+  .elemento-8{
+    margin-top: 8rem!important;
+  }
+  .elemento-9{
     margin-top: 9rem!important;
   }
   .contenedor {

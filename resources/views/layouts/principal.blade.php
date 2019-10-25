@@ -3,7 +3,8 @@
   <head>
     <title>Talachaz &mdash; MultiServicios</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png')}}">
     <link rel="icon" type="image/png" href="{{url('img/favicon.png')}}">
     <!--     Fonts and icons     -->
@@ -96,31 +97,6 @@
                     @guest
                     <li><a href="{{url('/')}} " class="nav-link">Home</a></li>
 
-                    <!-- <li class="dropdown nav-link">
-                      <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Categorias<span class="caret"></span>
-                      </a>
-                      <ul class="dropdown-menu" role="menu">
-                            <li class="ml-2 col-auto">
-                                <a class="text-danger" href="#">Mecanica</a>
-                            </li>
-                            <li class="ml-2 col-auto">
-                                <a class="text-danger" href="#">Albañileria</a>
-                            </li>
-                            <li class="ml-2 col-auto">
-                                <a class="text-danger" href="#">Plomeria</a>
-                            </li>
-                            <li class="ml-2 col-auto">
-                                <a class="text-danger" href="#">Herreria</a>
-                            </li>
-                            <li class="ml-2 col-auto">
-                                <a class="text-danger" href="#">Electrico</a>
-                            </li>
-                            <li class="ml-2 col-auto">
-                                <a class="text-danger" href="#">Aires Acondicionado</a>
-                            </li>
-                        </ul>
-
-                    </li> -->
                     <li><a href="#services-section" class="nav-link">Categorias</a></li>
 
                     <li><a href="#about-section" class="nav-link">Nosotros</a></li>
@@ -134,7 +110,7 @@
                     @endif
                     @else
                     <li><a href="{{url('/')}} " class="nav-link">Home</a></li>
-                    <li class="dropdown nav-link">
+                    <!-- <li class="dropdown nav-link">
                       <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Categorias<span class="caret"></span>
                       </a>
 
@@ -159,36 +135,37 @@
                             </li>
                         </ul>
 
-                    </li>
-                    <li class="dropdown nav-link">
+                    </li> -->
+                    <li><a href="/#services-section" class="nav-link">Categorias</a></li>
+                    <li class="dropdown">
                         <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
 
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="ml-2">
-                                <a class="text-danger" href=" {{url('/home')}} ">Ir a cesta</a>
+                        <ul class="dropdown-menu col-lg-12" role="menu">
+                            <li class="">
+                                <a class="text-dark" href=" {{url('/home')}} ">Ir a cesta</a>
                             </li>
                             @if (Auth::user()->admin)
-                            <li class="ml-2">
-                                <a class="text-danger" href=" {{url('/admin/products')}} ">Gestionar Empleados</a>
+                            <li class="">
+                                <a class="text-dark" href=" {{url('/admin/products')}} ">Gestionar Empleados</a>
                             </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href=" {{url('/admin/aspirant')}} ">Gestionar aspirantes</a>
+                            <li class="">
+                                <a class="text-dark" href=" {{url('/admin/aspirant')}} ">Gestionar aspirantes</a>
                             </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href=" {{url('/admin/products')}} ">Gestionar productos</a>
+                            <li class="">
+                                <a class="text-dark" href=" {{url('/admin/products')}} ">Gestionar productos</a>
                             </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href=" {{url('/admin/category')}} ">Gestionar Categorias</a>
+                            <li class="">
+                                <a class="text-dark" href=" {{url('/admin/category')}} ">Gestionar Categorias</a>
                             </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href=" {{url('/admin/user')}} ">Gestionar Usuarios</a>
+                            <li class="">
+                                <a class="text-dark" href=" {{url('/admin/user')}} ">Gestionar Usuarios</a>
                             </li>
                             @endif
-                            <li class="ml-2">
-                                <a class="text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <li class="">
+                                <a class="text-dark" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                     {{ __('Cerrar Sesión') }}
                                 </a>

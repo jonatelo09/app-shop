@@ -10,14 +10,14 @@
 @endif
 <div class="site-section bg-light">
       <div class="container">
-        <div class="bg-white py-4 mb-4 elemento-9">
+        <div class="bg-white py-4 mb-4 elemento-3">
           <div class="row mx-4 my-4 product-item-2 align-items-start">
             <div class="col-md-6 mb-5 mb-md-0">
               <img src="{{$product->featured_image_url}}" alt="Image" class="img-fluid" style="width: 550px; height: 450px;">
             </div>
 
             <div class="col-md-5 ml-auto product-title-wrap">
-              <span class="number">{{$product->id}}.</span>
+              <!-- <span class="number">{{$product->id}}.</span> -->
               <h3 class="text-black mb-4 font-weight-bold">{{$product->name}} </h3>
               <h5>{{$product->category->name}}</h5>
               <p class="mb-4">{{$product->description}}</p>

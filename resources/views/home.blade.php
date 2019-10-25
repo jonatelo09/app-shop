@@ -7,8 +7,8 @@
 @section('content')
 <div class="main main-raised">
     <div class="container">
-        <div class="section">
-            <h2 class="title text-center">Carrito</h2>
+        <div class="site-section">
+            <h2 class="title text-center elemento-4">Carrito</h2>
             @if (session('notification'))
             <div class="alert alert-success" role="alert">
                 {{ session('notification') }}

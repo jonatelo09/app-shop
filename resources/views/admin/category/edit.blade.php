@@ -7,8 +7,8 @@
 @section('content')
 <div class="main main-raised">
   <div class="container">
-      <div class="section">
-        <h2 class="title text-center">Editar categoria seleccionado</h2>
+      <div class="site-section">
+        <h2 class="title text-center elemento-4">Editar categoria seleccionado</h2>
         @if ($errors->any())
           <div class="alert alert-danger">
             <ul>

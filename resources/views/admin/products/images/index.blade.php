@@ -10,8 +10,8 @@
 </div>
 <div class="main main-raised">
     <div class="container">
-        <div class="section text-center">
-            <h2 class="title">imagenes de producto "{{$product->name}}"</h2>
+        <div class="site-section text-center">
+            <h2 class="title elemento-4">imagenes de producto "{{$product->name}}"</h2>
 
             <form method="post" action="" enctype="multipart/form-data">
                 @csrf
