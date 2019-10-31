@@ -2,6 +2,10 @@
 
 @section('title', 'App shop | Paypal')
 
+@section('style')
+<style type="text/css" src="{{asset('style-payments/bootstrap.min.css')}} ">
+</style>
+@endsection
 
 @section('content')
 <div class="container">

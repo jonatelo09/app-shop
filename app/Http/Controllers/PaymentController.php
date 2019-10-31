@@ -56,6 +56,8 @@ class PaymentController extends Controller {
 	}
 
 	public function cancelado() {
-		return 'Su orden fue cancelada';
+		return redirect()
+			->route('home')
+			->withErrors('Tu pago ha sido cancelado');
 	}
 }

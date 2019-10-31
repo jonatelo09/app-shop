@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png')}}">
-    <link rel="icon" type="image/png" href="{{url('img/favicon.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/talachas-ICO.svg')}}">
+    <link rel="icon" type="image/png" href="{{url('img/talachas-ICO.svg')}}">
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
@@ -195,11 +195,14 @@
      @include('includes.footerdos')
     </div> <!-- .site-wrap -->
 
-  <script src="{{asset('js_II/jquery-3.3.1.min.js')}}"></script>
-  <script src="{{asset('js_II/jquery-migrate-3.0.1.min.js')}}"></script>
+  <<script src="{{asset('js_II/jquery-3.3.1.min.js')}}"></script>
+  <!-- <script src="{{asset('style-payments/js/jquery-3.2.1.slim.min.js')}}"></script> -->
+  <<script src="{{asset('js_II/jquery-migrate-3.0.1.min.js')}}"></script>
   <script src="{{asset('js_II/jquery-ui.js')}}"></script>
   <script src="{{asset('js_II/popper.min.js')}}"></script>
+  <!-- <script src="{{asset('style-payments/js/popper.min.js')}}"></script> -->
   <script src="{{asset('js_II/bootstrap.min.js')}}"></script>
+  <!-- <script src="{{asset('style-payments/js/bootstrap.min.js')}}"></script> -->
   <script src="{{asset('js_II/owl.carousel.min.js')}}"></script>
   <script src="{{asset('js_II/jquery.stellar.min.js')}}"></script>
   <script src="{{asset('js_II/jquery.countdown.min.js')}}"></script>
@@ -211,29 +214,8 @@
 
 
   <script src="{{asset('js_II/main.js')}}"></script>
-
-
-  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
-
-<!--   Core JS Files   -->
-<script src="{{asset('js/calificacion.js')}} " type="text/javascript"></script>
-<!-- <script src="{{asset('/js/jquery.min.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/all.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/material.min.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/plugins/moment.min.js') }}"></script>
-Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker
-<script src="{{asset('/js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
-Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
-<script src="{{asset('/js/nouislider.min.js') }}" type="text/javascript"></script>
-<script src="{{asset('/js/material-kit.js') }}" type="text/javascript"></script> -->
-
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    @stack('scripts') -->
+  <!--   Core JS Files   -->
+  <script src="{{asset('js/calificacion.js')}} " type="text/javascript"></script>
 
   </body>
 </html>

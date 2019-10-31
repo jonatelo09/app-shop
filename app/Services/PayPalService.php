@@ -83,7 +83,7 @@ Class PayPalService {
 					0 => [
 						'amount' => [
 							'currency_code' => strtoupper($currency),
-							'value' => $value,
+							'value' => route($value * $factor) / $factor,
 						],
 					],
 				],
