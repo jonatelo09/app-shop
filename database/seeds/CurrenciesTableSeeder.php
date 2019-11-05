@@ -13,6 +13,7 @@ class CurrenciesTableSeeder extends Seeder {
 		$currencies = [
 			'mxn',
 			'usd',
+			'jpy',
 		];
 
 		foreach ($currencies as $currency) {

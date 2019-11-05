@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewOrder;
-use App\Services\PayPalService;
+use App\Resolvers\PaymentPlatformResolver;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Mail;
 
 class PaymentController extends Controller {
+
+	protected $paymentPlatformResolver;
+	public function __construct(PaymentPlatformResolver $paymentPlatformResolver) {
+		$this->middleware('auth');
+
+		$this->paymentPlatformResolver = $paymentPlatformResolver;
+	}
 	public function pay(Request $request) {
 		$rules = [
 			'value' => ['required', 'numeric', 'min:5'],
@@ -19,7 +26,9 @@ class PaymentController extends Controller {
 
 		$request->validate($rules);
 
-		$paymentPlatform = resolve(PayPalService::class);
+		$paymentPlatform = $this->paymentPlatformResolver
+			->resolveService($request->payment_platform);
+		session()->put('paymentPlatformId', $request->payment_platform);
 
 		return $paymentPlatform->handlePayment($request);
 
@@ -27,18 +36,24 @@ class PaymentController extends Controller {
 
 	public function aprobada() {
 
-		$paymentPlatform = resolve(PayPalService::class);
+		if (session()->has('paymentPlatformId')) {
+			$paymentPlatform = $this->paymentPlatformResolver
+				->resolveService(session()->get('paymentPlatformId'));
+			$client = auth()->user();
+			$cart = $client->cart;
+			$cart->status = 'Pendiente';
+			$cart->oreder_date = Carbon::now();
+			$cart->save();
 
-		$client = auth()->user();
-		$cart = $client->cart;
-		$cart->status = 'Pendiente';
-		$cart->oreder_date = Carbon::now();
-		$cart->save();
+			$admins = User::where('admin', true)->get();
+			Mail::to($admins)->send(new NewOrder($client, $cart));
 
-		$admins = User::where('admin', true)->get();
-		Mail::to($admins)->send(new NewOrder($client, $cart));
+			return $paymentPlatform->handleAprobada();
+		}
 
-		return $paymentPlatform->handleAprobada();
+		return redirect()
+			->route('home')
+			->withErrors('No podemos recuperar su plataforma de pago. por favor, inténtalo de nuevo');
 	}
 
 	public function update() {
