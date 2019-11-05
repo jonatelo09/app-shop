@@ -42,13 +42,10 @@ return [
 	],
 
 	'stripe' => [
-		'model' => App\User::class,
+		'base_uri' => env('STRIPE_BASE_URI'),
 		'key' => env('STRIPE_KEY'),
 		'secret' => env('STRIPE_SECRET'),
-		'webhook' => [
-			'secret' => env('STRIPE_WEBHOOK_SECRET'),
-			'tolerance' => env('STRIPE_WEBHOOK_TOLERANCE', 300),
-		],
+		'class' => App\Services\StripeService::class,
 	],
 
 ];
