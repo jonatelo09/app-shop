@@ -21,17 +21,5 @@ class PaymentPlatformsTableSeeder extends Seeder {
 			'image' => 'img/payment-platforms/stripe.jpg',
 
 		]);
-
-		PaymentPlatform::create([
-			'name' => 'Stripe',
-			'image' => 'img/payment-platforms/openpay.png',
-
-		]);
-
-		PaymentPlatform::create([
-			'name' => 'Stripe',
-			'image' => 'img/payment-platforms/merpago.jpg',
-
-		]);
 	}
 }

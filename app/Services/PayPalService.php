@@ -83,7 +83,7 @@ Class PayPalService {
 					0 => [
 						'amount' => [
 							'currency_code' => strtoupper($currency),
-							'value' => round($value * $factor = $this->resolveFactor($currency)) / $factor,
+							'value' => $value, /*round($value * $factor = $this->resolveFactor($currency)) / $factor,*/
 						],
 					],
 				],
