@@ -3,6 +3,7 @@
   <head>
     <title>Talachaz &mdash; MultiServicios</title>
     <meta charset="utf-8">
+    <meta name="description" content="Empresa dedicada a brindar servicios a domicilio, servicios que van desde lo mas básico hasta los mas avanzado, plomeria, albañilería, herrería, diligenciero, mecánica automotriz, mecánica de motos, etc.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/talachas-ICO.svg')}}">
@@ -58,29 +59,6 @@
       <div class="site-mobile-menu-body"></div>
     </div>
 
-    <!-- <div class=" py-1 bg-light" id="home-section">
-      <div class="container">
-        <div class="row align-items-center">
-
-          <div class="col-6 text-left">
-            <ul class="social-media">
-              <li><a href="#" class=""><span class="icon-facebook"></span></a></li>
-              <li><a href="#" class=""><span class="icon-twitter"></span></a></li>
-              <li><a href="#" class=""><span class="icon-instagram"></span></a></li>
-              <li><a href="#" class=""><span class="icon-linkedin"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <p class="mb-0 float-right">
-              <span class="mr-3 text-danger"><a href="tel://#"> <span class="icon-phone mr-2 text-danger" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">9983456795</span></a></span>
-              <span><a href="#"><span class="icon-envelope mr-2 text-danger" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-black">servicios@talachaz.com</span></a></span>
-            </p>
-
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <header class="site-navbar py-2 bg-white js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
@@ -100,42 +78,13 @@
                     <li><a href="#services-section" class="nav-link">Categorias</a></li>
 
                     <li><a href="#about-section" class="nav-link">Nosotros</a></li>
-                    <!--<li><a href="#special-section" class="nav-link">Special</a></li>
-                    <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                    <li><a href="#blog-section" class="nav-link">Blog</a></li>-->
                     <li><a href="#contact-section" class="nav-link">Contactanos</a></li>
                     <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                     @if (Route::has('register'))
-                        <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                        <li><a class="nav-link" href="{{ route('register') }}">Registro</a></li>
                     @endif
                     @else
                     <li><a href="{{url('/')}} " class="nav-link">Home</a></li>
-                    <!-- <li class="dropdown nav-link">
-                      <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">Categorias<span class="caret"></span>
-                      </a>
-
-                      <ul class="dropdown-menu col-md-6" role="menu">
-                            <li class="ml-2">
-                                <a class="text-danger" href="#">Mecanica</a>
-                            </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href="#">Albañileria</a>
-                            </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href="#">Plomeria</a>
-                            </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href="#">Herreria</a>
-                            </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href="#">Electrico</a>
-                            </li>
-                            <li class="ml-2">
-                                <a class="text-danger" href="#">Aires Acondicionado</a>
-                            </li>
-                        </ul>
-
-                    </li> -->
                     <li><a href="/#services-section" class="nav-link">Categorias</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">

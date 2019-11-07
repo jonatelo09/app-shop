@@ -110,6 +110,7 @@ Class StripeService {
 		$zeroDecimalCurrencies = ['JPY'];
 
 		if (in_array(strtoupper($currency), $zeroDecimalCurrencies)) {
+
 			return 1;
 		}
 

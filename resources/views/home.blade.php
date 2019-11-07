@@ -60,7 +60,7 @@
                                 <!--@method('DELETE')
                                     <input type="hidden" name="cart_detail_id" value="{‌{ $detail->id }}">-->
 
-                                <a href="{{ url('/products/'.$detail->product->id) }}" target="_blank" rel="tooltip"
+                                <a href="{{ url('/products-dos/'.$detail->product->id) }}" target="_blank" rel="tooltip"
                                     title="ver detalles" class="btn btn-info btn-sm btn-xs"> <i
                                         class="fa fa-info"></i></a>
 
