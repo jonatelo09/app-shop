@@ -42,7 +42,7 @@ class PaymentController extends Controller {
 				->resolveService(session()->get('paymentPlatformId'));
 			$client = auth()->user();
 			$cart = $client->cart;
-			$cart->status = 'Pendiente';
+			$cart->status = 'Aprobada';
 			$cart->oreder_date = Carbon::now();
 			$cart->save();
 
