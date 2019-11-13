@@ -5,18 +5,58 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card elemento-7">
-                <div class="card-header text-center">Pago de Talacha</div>
+        <div class="col-md-6">
+            <div class=" elemento-7">
+                <div class="text-center">
+                    <h3>Detalle de compra</h3>
+                </div>
+                <div class="">
+                    <div class="row">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"></th>
+                                    <th>Talachaz</th>
+                                    <th class="text-center">Cantidad</th>
+                                    <th>SubTotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(auth()->user()->cart->details as $detail)
+                                <tr>
+                                    <td class="text-center"> <img src="{{ $detail->product->featured_image_url}}" height="50"> </td>
+                                    <td>
+                                        {{ $detail->product->name}}
+                                    </td>
+                                    <td>Cantidad: {{$detail->quantity}}</td>
+                                    <td>${{$detail->quantity * $detail->product->price}}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Total</th>
+                                    <th><h2>${{auth()->user()->cart->total}}</h2></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="elemento-7">
+                <div class="text-center"><h4>Pago de Talacha</h4></div>
 
-                <div class="card-body">
+                <div class="text-center">
                     <form action="{{ route('pay') }}" method="POST" id="paymentForm">
                         @csrf
                         <div class="row">
-                            <div class="col-auto">
+                            <div class="col-sm-4 col-md-5">
                                 <label>Cantidad a Pagar:</label>
                                 <input
-                                    type="number"
                                     class="form-control"
                                     name="value"
                                     value="{{ auth()->user()->cart->total }}"
@@ -27,7 +67,7 @@
                                     Use values with up to two decimal positions, using dot "."
                                 </small>-->
                             </div>
-                            <div class="col-auto">
+                            <div class="col-sm-4 col-md-5">
                                 <label>Moneda</label>
                                 <select class="custom-select" name="currency" required>
                                     @foreach ($currencies as $currency)

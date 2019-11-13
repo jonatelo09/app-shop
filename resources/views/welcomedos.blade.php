@@ -2,13 +2,13 @@
 
 @section('title','Bienvenido a '. config('app.name'))
 @section('content')
- <div class="site-blocks-cover overlay" style="background-image: url({{asset('selling/images/hero2.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
+ <div class="site-blocks-cover overlay" style="background-image: url({{asset('img/tal-fondo.jpg')}});" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center">
 
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
             <div class="row mb-2">
-              <div class="card col-md-7">
+              <div class="card col-md-auto special-card">
                 <h1 class="text-cursiva text-dark">Agenda tu Talacha</h1>
                 <h3 class="bm-5 lead text-dark">En Talachaz.com puedes: </h3>
                 <ul>
@@ -23,7 +23,7 @@
                 <div class="mt-2 mb-4">
                   @guest
                   <a href="#services-section" class="btn btn-primary py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
-                  <a href="{{ route('register')}}" class="btn btn-black py-3 px-5 rounded-5 d-block d-sm-inline-block">Registrate</a>
+                  <a href="{{ route('register')}}" class="btn btn-info py-3 px-5 rounded-5 d-block d-sm-inline-block">Registrate</a>
                   @endguest
                   @if(auth()->User())
                   <a href="#services-section" class="btn btn-primary btn-block py-3 px-5 rounded-5 mb-lg-0 mb-2 d-block d-sm-inline-block">Agenda Ahora</a>
@@ -57,63 +57,95 @@
             </div>
           </div>
           @endforeach
-
-          <!--<div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary  icon-transfer_within_a_station"></span></div>
-              <div>
-                <h3>Albañileria</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary  icon-build"></span></div>
-              <div>
-                <h3>Plomeria</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-beenhere"></span></div>
-              <div>
-                <h3>Herreria</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-flash_on"></span></div>
-              <div>
-                <h3>Electrico</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-ac_unit"></span></div>
-              <div>
-                <h3>Aires Acondicionados</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>-->
-
         </div>
       </div>
     </div>
+
+    <!-- Carrusel de productos -->
+    <!-- <section class="carousel slide" data-ride="carousel" id="postsCarousel">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 text-right mb-4">
+                  <a class="btn btn-outline-secondary prev" href="" title="go back"><i class="fa fa-lg fa-chevron-left"></i></a>
+                  <a class="btn btn-outline-secondary next" href="" title="more"><i class="fa fa-lg fa-chevron-right"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="container p-t-0 m-t-2 carousel-inner">
+          <div class="row row-equal carousel-item active m-t-0">
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-img-top card-img-top-250">
+                          <img class="img-fluid" src="img/29223655865_4b8b01989e.jpg" alt="Carousel 1">
+                      </div>
+                      <div class="card-block p-t-2">
+                          <div class="card-header"><h3>flower1</h3></div>
+                          <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-img-top card-img-top-250">
+                          <img class="img-fluid" src="img/35515203036_f8006072b8.jpg" alt="Carousel 1">
+                      </div>
+                      <div class="card-block p-t-2">
+                          <div class="card-header"><h3>flower2</h3></div>
+                          <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-img-top card-img-top-250">
+                          <img class="img-fluid" src="img/3d75927b210409af8582828c4049fcd0.jpg" alt="Carousel 1">
+                      </div>
+                      <div class="card-block p-t-2">
+                          <div class="card-header"><h3>flower1</h3></div>
+                          <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="row row-equal carousel-item m-t-0">
+              <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-img-top card-img-top-250">
+                          <img class="img-fluid" src="img/45590771a1ee18248a49bd399ef99bf1--posts.jpg" alt="Carousel 1">
+                      </div>
+                      <div class="card-block p-t-2">
+                          <div class="card-header"><h3>flower1</h3></div>
+                          <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
+                      </div>
+                  </div>
+              </div>
+             <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-img-top card-img-top-250">
+                          <img class="img-fluid" src="img/917d7b69ebd58d0ef0e561cdcb016303--red-rose-bouquet-red-rose-flower.jpg" alt="Carousel 1">
+                      </div>
+                      <div class="card-block p-t-2">
+                          <div class="card-header"><h3>flower1</h3></div>
+                          <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
+                      </div>
+                  </div>
+              </div>
+             <div class="col-md-4">
+                  <div class="card">
+                      <div class="card-img-top card-img-top-250">
+                          <img class="img-fluid" src="img/29223655865_4b8b01989e.jpg" alt="Carousel 1">
+                      </div>
+                      <div class="card-block p-t-2">
+                          <div class="card-header"><h3>flower1</h3></div>
+                          <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id. Incidunt hic laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section> -->
+    <!-- End carrusel de productos -->
 
     <!-- <div class="site-section" id="products-section">
       <div class="container">
@@ -139,7 +171,7 @@
             <div class="product-item">
               <a href="{{url('/products-dos/'.$product->id) }}">
                 <figure>
-                  <img src="{{asset('images/products/'.$product->image)}}" alt="Image" class="img-fluid">
+                  <img src="{{$product->featured_image_url}}" alt="Image" class="img-fluid">
                 </figure>
               </a>
               <div class="px-4">
@@ -238,7 +270,7 @@
         <div class="bg-white py-4 mb-4">
           <div class="row mx-4 my-4 product-item-2 align-items-start">
             <div class="col-md-6 mb-5 mb-md-0">
-              <img src="{{asset('selling/images/mecanica.jpg')}}" alt="Image" class="img-fluid">
+              <img src="{{asset('img/mecanica.jpg')}}" alt="Image" class="img-fluid">
             </div>
 
             <div class="col-md-5 ml-auto product-title-wrap">
@@ -269,7 +301,7 @@
         <div class="bg-white py-4">
           <div class="row mx-4 my-4 product-item-2 align-items-start">
             <div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
-              <img src="{{asset('selling/images/bujias.jpg')}}" alt="Image" class="img-fluid">
+              <img src="{{asset('img/moto.jpg')}}" alt="Image" class="img-fluid">
             </div>
 
             <div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
@@ -297,6 +329,61 @@
 
       </div>
     </div>
+
+    <!-- <div class="site-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="row">
+                  @foreach($products as $product)
+                  <div class="col-lg-4 col-md-6 mb-5">
+
+                    <div class="product-item">
+                      <a href="{{url('/products-dos/'.$product->id) }}">
+                        <figure>
+                          <img src="{{ $product->featured_image_url }}" alt="Image" class="img-fluid" style="width: 250px; height: 250px;">
+                        </figure>
+                        </a>
+                      <div class="px-2">
+                        <h3><a href="{{url('/products-dos/'.$product->id) }}">{{ $product->name }} </a></h3>
+                        <div class="mb-2">
+                          <span class="meta-icons mr-2"><a href="#" type="button" class="mr-2" data-toggle="modal" data-target="#exampleModalCenter"><span class="icon-star text-warning"></span></a> 5.0</span>
+                        </div>
+                         <h3 class="mb-2">${{ $product->price }} </h3>
+                        <p class="mb-2">{{ $product->description }} </p>
+                        <div>
+                          @if(auth()->check())
+                          <a href="#" class="btn btn-danger rounded-5 d-block d-lg-inline-block" data-toggle="modal" data-target="#ModalAddCar"><span class="icon-cart-plus text-white"></span></a>
+                          @else
+                          <a href="{{url('/login?redirect_to='.url()->current()) }}" class="btn btn-danger rounded-5 d-block d-lg-inline-block"><span class="icon-cart-plus text-white"></span></a>
+                          @endif
+                            <a href="{{url('/products-dos/'.$product->id) }}" class="btn btn-black btn-outline-black ml-1 rounded-0">Ver Detalles</a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  @endforeach
+                </div>
+              </div>
+
+            </div>
+
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
 
     <div class="site-section" id="about-section">

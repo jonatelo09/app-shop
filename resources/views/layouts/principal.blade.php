@@ -8,20 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/talachas-ICO.svg')}}">
     <link rel="icon" type="image/png" href="{{url('img/talachas-ICO.svg')}}">
+
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="{{asset('selling/fonts/icomoon/style.css')}}">
-
+    <link rel="stylesheet" href="{{asset('css_II/font/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="{{asset('css_II/bootstrap.min.css')}}">
-    <!-- <link rel="stylesheet" href="{{asset('selling/css/bootstrap.min.css')}}"> -->
     <link rel="stylesheet" href="{{asset('css_II/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('css_II/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('css_II/owl.theme.default.min.css')}}">
@@ -52,7 +48,7 @@
       <div class="site-mobile-menu-body"></div>
     </div>
 
-    <header class="site-navbar py-2 bg-white js-sticky-header site-navbar-target" role="banner">
+    <header class="site-navbar py-1 bg-white js-sticky-header site-navbar-target" role="banner">
 
       <div class="container">
         <div class="row align-items-center">
@@ -137,8 +133,21 @@
      @include('includes.footerdos')
     </div> <!-- .site-wrap -->
   @stack('scripts')
+<!--   <script>
+ (function($){
+   "use strict";
+   $('.next').click(function(){ $('.carousel').carousel('next');return false; });
+   $('.prev').click(function(){ $('.carousel').carousel('prev');return false; });
+ })
+ (jQuery);
+</script> -->
+<script type="text/javascript">
+  $('.carousel').carousel()
+  $('.carousel').carousel({
+  interval: 2000
+})
+</script>
   <<script src="{{asset('js_II/jquery-3.3.1.min.js')}}"></script>
-  <!-- <script src="{{asset('style-payments/js/jquery-3.2.1.slim.min.js')}}"></script> -->
   <<script src="{{asset('js_II/jquery-migrate-3.0.1.min.js')}}"></script>
   <script src="{{asset('js_II/jquery-ui.js')}}"></script>
   <script src="{{asset('js_II/popper.min.js')}}"></script>

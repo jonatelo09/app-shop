@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card elemento-4">
                 <div class="card-header">Completar los pasos de seguridad!</div>
 
                 <div class="card-body">
