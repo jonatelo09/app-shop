@@ -64,10 +64,10 @@
                     @guest
                     <li><a href="{{url('/')}} " class="nav-link">Home</a></li>
 
-                    <li><a href="#services-section" class="nav-link">Categorias</a></li>
+                    <li><a href="/#services-section" class="nav-link">Categorias</a></li>
 
-                    <li><a href="#about-section" class="nav-link">Nosotros</a></li>
-                    <li><a href="#contact-section" class="nav-link">Contactanos</a></li>
+                    <li><a href="/#about-section" class="nav-link">Nosotros</a></li>
+                    <li><a href="/#contact-section" class="nav-link">Contactanos</a></li>
                     <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                     @if (Route::has('register'))
                         <li><a class="nav-link" href="{{ route('register') }}">Registro</a></li>
@@ -81,28 +81,28 @@
                         </a>
 
 
-                        <ul class="dropdown-menu col-lg-12" role="menu">
-                            <li class="">
-                                <a class="text-dark" href=" {{url('/home')}} ">Ir a cesta</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-item">
+                                  <a class="text-dark" href=" {{url('/home')}} ">Ir a cesta</a>
                             </li>
                             @if (Auth::user()->admin)
-                            <li class="">
-                                <a class="text-dark" href=" {{url('/admin/products')}} ">Gestionar Empleados</a>
+                            <li class="dropdown-item">
+                                  <a class="text-dark" href=" {{url('/admin/products')}} ">Gestionar Empleados</a> 
                             </li>
-                            <li class="">
+                            <li class="dropdown-item">
                                 <a class="text-dark" href=" {{url('/admin/aspirant')}} ">Gestionar aspirantes</a>
                             </li>
-                            <li class="">
+                            <li class="dropdown-item">
                                 <a class="text-dark" href=" {{url('/admin/products')}} ">Gestionar productos</a>
                             </li>
-                            <li class="">
+                            <li class="dropdown-item">
                                 <a class="text-dark" href=" {{url('/admin/category')}} ">Gestionar Categorias</a>
                             </li>
-                            <li class="">
+                            <li class="dropdown-item">
                                 <a class="text-dark" href=" {{url('/admin/user')}} ">Gestionar Usuarios</a>
                             </li>
                             @endif
-                            <li class="">
+                            <li class="dropdown-item">
                                 <a class="text-dark" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                     {{ __('Cerrar Sesión') }}

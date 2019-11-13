@@ -390,7 +390,7 @@
       <div class="container">
         <div class="row align-items-lg-center">
           <div class="col-md-8 mb-5 mb-lg-0 position-relative">
-            <img src="{{asset('selling/images/nosotros.png')}}" class="img-fluid" alt="Image">
+            <img src="{{asset('img/hero2.jpg')}}" class="img-fluid" alt="Image">
             <div class="experience">
               <span class="year">Empresa Confiable</span>
               <span class="caption">Más de 50 años en el mercado</span>
