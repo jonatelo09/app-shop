@@ -54,7 +54,7 @@
             </p>
             <hr>-->
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-md-10 table-active">
                         <table class="table">
                                 <thead>
                                     <tr>
@@ -96,7 +96,7 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td> {{ $detail->product->price}}</td>
+                                        <td class="col-auto">$ {{ $detail->product->price}}</td>
                                         <!--<td class="text-center"> {{$detail->quantity}} </td>
                                         <td>$ {{$detail->quantity * $detail->product->price}}</td>-->
                                         <!--<td class="td-actions">
@@ -119,16 +119,18 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <p>El precio y la disponibilidad de los productos de talachaz.com están sujetos a cambio. En el carrito de compras puedes dejar temporalmente los productos que quieras. Aparecerá el precio más reciente de cada producto. </p>
+                            <hr>
+                            <p class="alert alert-info">El precio y la disponibilidad de los productos de talachaz.com están sujetos a cambio. En el carrito de compras puedes dejar temporalmente los productos que quieras. Aparecerá el precio más reciente de cada producto. </p>
                 </div>
-                <div class="col-md-2">
-                    <div>
-                        <p>Subtotal ({{ auth()->user()->cart->details->count() }} productos): ${{auth()->user()->cart->total}}</p>
+                <div class="col-md-2 table-active">
+                    <div class="">
+                        <p>({{ auth()->user()->cart->details->count() }} productos)</p>
+                        <p>Subtotal: ${{auth()->user()->cart->total}}</p>
                     </div>
-                    <div class="text-center">
+                    <div class="">
                         @if(auth()->user()->cart->details->count() > 0)
-                            <a href="{{url('/payments')}} " class="btn btn-primary btn-round">
-                                <i class="material-icons">done</i>Proceder al Pago
+                            <a href="{{url('/payments')}} " class="btn btn-block btn-warning btn-round">
+                                Proceder al Pago
                             </a>
                         @endif
 

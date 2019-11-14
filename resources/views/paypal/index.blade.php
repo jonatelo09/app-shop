@@ -5,31 +5,31 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-7">
+        <div class="col-md-7 table-active">
             <div class="elemento-7">
                 <div class="text-left">
                     <h3>Revisa tu Servicio</h3>
                 </div>
                 <div class="">
                     <div class="row">
-                        <table class="table table-active table-responsive">
+                        <table class="table table-responsive">
                             <thead>
                                 <tr>
-                                    <th class="text-center">Direccion del Cliente</th>
+                                    <th class="text-center">Información del Cliente</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
                                         <p>{{ auth()->user()->name}} </p>
-                                        <p>Region 96, calle 34, mz 34, lte 56, 3ra ampliacion</p>
+                                        <p>{{ auth()->user()->address}} </p>
                                     </td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <th>
-                                        <p>A esta direccion el personal de talachaz ira a brindar el servicio</p>
+                                        <li class="ml-4"><p class="alert alert-info">A esta direccion el personal de talachaz ira a brindar el servicio</p></li>
                                     </th>
                                 </tr>
                             </tfoot>
@@ -38,10 +38,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 table-active">
             <div class="elemento-7">
                 <div class="text-center"><h4>Pago de Talacha</h4></div>
-
+                <hr>
                 <div class="">
                     <form action="{{ route('pay') }}" method="POST" id="paymentForm">
                         @csrf
@@ -70,6 +70,7 @@
                                 </select>
                             </div>
                         </div>
+                        <hr>
                         <div class="row mt-3">
                             <div class="col">
                                 <label>Selecciona la plataforma de pago de desees:</label>
@@ -103,9 +104,11 @@
                                 </div>
                             </div>
                         </div>
+                        <hr>
                         <div class="text-left mt-3">
                             <button type="submit" id="payButton" class="btn btn-success btn-lg btn-block">Pagar</button>
                         </div>
+                        <hr>
                     </form>
                 </div>
             </div>

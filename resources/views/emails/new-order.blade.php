@@ -7,7 +7,7 @@
 <body>
 	<p>Se ha realizado un nuevo pedido!</p>
 	<p>Estos son los datos de cliente</p>
-	<ul>
+	<ul class="table-active">
 		<li>
 			<strong>Nombre: </strong>
 			{{ $user->name }}
@@ -24,6 +24,10 @@
 		<li>
 			<strong>Fecha de pedido:</strong>
 			{{ $cart->oreder_date }}
+		</li>
+		<li>
+			<strong>Direccion:</strong>
+			{{$user->address}}
 		</li>
 	</ul>
 	<hr>
