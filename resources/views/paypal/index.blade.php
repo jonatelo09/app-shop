@@ -5,40 +5,32 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class=" elemento-7">
-                <div class="text-center">
-                    <h3>Detalle de compra</h3>
+        <div class="col-md-7">
+            <div class="elemento-7">
+                <div class="text-left">
+                    <h3>Revisa tu Servicio</h3>
                 </div>
                 <div class="">
                     <div class="row">
-                        <table class="table table-responsive">
+                        <table class="table table-active table-responsive">
                             <thead>
                                 <tr>
-                                    <th class="text-center"></th>
-                                    <th>Talachaz</th>
-                                    <th class="text-center">Cantidad</th>
-                                    <th>SubTotal</th>
+                                    <th class="text-center">Direccion del Cliente</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach(auth()->user()->cart->details as $detail)
                                 <tr>
-                                    <td class="text-center"> <img src="{{ $detail->product->featured_image_url}}" height="50"> </td>
                                     <td>
-                                        {{ $detail->product->name}}
+                                        <p>{{ auth()->user()->name}} </p>
+                                        <p>Region 96, calle 34, mz 34, lte 56, 3ra ampliacion</p>
                                     </td>
-                                    <td>Cantidad: {{$detail->quantity}}</td>
-                                    <td>${{$detail->quantity * $detail->product->price}}</td>
                                 </tr>
-                                @endforeach
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th>Total</th>
-                                    <th><h2>${{auth()->user()->cart->total}}</h2></th>
+                                    <th>
+                                        <p>A esta direccion el personal de talachaz ira a brindar el servicio</p>
+                                    </th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -50,7 +42,7 @@
             <div class="elemento-7">
                 <div class="text-center"><h4>Pago de Talacha</h4></div>
 
-                <div class="text-center">
+                <div class="">
                     <form action="{{ route('pay') }}" method="POST" id="paymentForm">
                         @csrf
                         <div class="row">
@@ -111,8 +103,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center mt-3">
-                            <button type="submit" id="payButton" class="btn btn-success btn-lg">Pagar</button>
+                        <div class="text-left mt-3">
+                            <button type="submit" id="payButton" class="btn btn-success btn-lg btn-block">Pagar</button>
                         </div>
                     </form>
                 </div>
