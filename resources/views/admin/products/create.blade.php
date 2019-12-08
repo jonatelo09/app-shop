@@ -1,4 +1,4 @@
-@extends('layouts.principal')
+ @extends('layouts.principal')
 
 @section('title', 'Registro de productos')
 

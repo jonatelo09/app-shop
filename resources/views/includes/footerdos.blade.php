@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-5">
             <h2 class="footer-heading mb-4">Nosotros</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+            <p>Empresa dedicada a brindar servicios a domicilio, servicios que van desde lo mas básico hasta los mas avanzado, plomeria, albañilería, herrería, diligenciero, mecánica automotriz, mecánica de motos, etc.</p>
           </div>
           <div class="col-md-3 ">
             <h2 class="footer-heading mb-4">Enlaces</h2>

@@ -399,8 +399,8 @@
           <div class="col-md-3 ml-auto">
             <h3 class="section-sub-title"></h3>
             <h2 class="section-title mb-3">Nosotros</h2>
-            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat blanditiis nihil, consectetur. Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius vero vel!</p>
-            <p><a href="#" class="btn btn-black btn-black--hover rounded-0">Learn More</a></p>
+            <p class="mb-4">Empresa dedicada a brindar servicios a domicilio, servicios que van desde lo mas básico hasta los mas avanzado, plomeria, albañilería, herrería, diligenciero, mecánica automotriz, mecánica de motos, etc.</p>
+            <!-- <p><a href="#" class="btn btn-black btn-black--hover rounded-0">Learn More</a></p> -->
           </div>
         </div>
       </div>

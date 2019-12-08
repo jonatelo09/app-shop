@@ -31,7 +31,7 @@
         					<td>{{ $categori->description}}</td>
 
                             <td>
-                                <img src=" {{ $categori->featured_image_url }} " height="50">
+                                <img src=" {{ $categori->featured_image_url }} " height="80px" width="60px">
                             </td>
                             <td><span class="text-danger {{ $categori->icono}}"></span> </td>
         					<td class="td-actions text-right">

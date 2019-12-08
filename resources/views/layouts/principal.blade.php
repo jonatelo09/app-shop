@@ -49,13 +49,9 @@
     </div>
 
     <header class="site-navbar py-1 bg-white js-sticky-header site-navbar-target" role="banner">
-
       <div class="container">
         <div class="row align-items-center">
-
           <div class="col-6 col-xl-2 contenedor">
-            <!-- <h1 class="mb-0 site-logo"><a href="{{url('/')}} " class="text-black mb-0 text-cursiva"><span class="text-danger  icon-format_size"></span>
-              Talachaz<span class="text-danger">.</span>com <span class="">&#160;</span> </a></h1> -->
             <h1 class="mb-0 site-logo"><a href="{{url('/')}} " class="text-black mb-0 text-cursiva"><img class="text-danger mt-1" src="{{url('img/talachas.svg')}} "></a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -76,18 +72,16 @@
                     <li><a href="{{url('/')}} " class="nav-link">Home</a></li>
                     <li><a href="/#services-section" class="nav-link">Categorias</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <a class="dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
-
-
                         <ul class="dropdown-menu" role="menu">
                             <li class="dropdown-item">
                                   <a class="text-dark" href=" {{url('/home')}} ">Ir a cesta</a>
                             </li>
                             @if (Auth::user()->admin)
                             <li class="dropdown-item">
-                                  <a class="text-dark" href=" {{url('/admin/products')}} ">Gestionar Empleados</a> 
+                                  <a class="text-dark" href=" {{url('/admin/products')}} ">Gestionar Empleados</a>
                             </li>
                             <li class="dropdown-item">
                                 <a class="text-dark" href=" {{url('/admin/aspirant')}} ">Gestionar aspirantes</a>
@@ -100,6 +94,9 @@
                             </li>
                             <li class="dropdown-item">
                                 <a class="text-dark" href=" {{url('/admin/user')}} ">Gestionar Usuarios</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a class="text-dark" href=" {{url('/admin/profile')}} ">Perfil</a>
                             </li>
                             @endif
                             <li class="dropdown-item">
@@ -116,7 +113,14 @@
                         </ul>
                     </li>
 
-                     <li><a href="{{url('/home')}} " class="nav-link"> <i class="material-icons">shopping_cart</i></a></li>
+                     <li>
+                        <a href="{{url('/home')}} " class="nav-link">
+                            <i class="material-icons">shopping_cart</i>
+                            <span class="badge badge-danger spinner-border">
+                                {{ auth()->user()->cart->details->quantity }}
+                            </span>
+                        </a>
+                    </li>
                     @endguest
                 </ul>
             </nav>
@@ -131,37 +135,24 @@
     </header>
     <div class="site-wrap">@yield('content')</div>
      @include('includes.footerdos')
-    </div> <!-- .site-wrap -->
-  @stack('scripts')
-<!--   <script>
- (function($){
-   "use strict";
-   $('.next').click(function(){ $('.carousel').carousel('next');return false; });
-   $('.prev').click(function(){ $('.carousel').carousel('prev');return false; });
- })
- (jQuery);
-</script> -->
-<script type="text/javascript">
-  $('.carousel').carousel()
-  $('.carousel').carousel({
-  interval: 2000
-})
-</script>
-  <<script src="{{asset('js_II/jquery-3.3.1.min.js')}}"></script>
-  <<script src="{{asset('js_II/jquery-migrate-3.0.1.min.js')}}"></script>
-  <script src="{{asset('js_II/jquery-ui.js')}}"></script>
-  <script src="{{asset('js_II/popper.min.js')}}"></script>
-  <!-- <script src="{{asset('style-payments/js/popper.min.js')}}"></script> -->
-  <script src="{{asset('js_II/bootstrap.min.js')}}"></script>
-  <!-- <script src="{{asset('style-payments/js/bootstrap.min.js')}}"></script> -->
-  <script src="{{asset('js_II/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('js_II/jquery.stellar.min.js')}}"></script>
-  <script src="{{asset('js_II/jquery.countdown.min.js')}}"></script>
-  <script src="{{asset('js_II/bootstrap-datepicker.min.js')}}"></script>
-  <script src="{{asset('js_II/jquery.easing.1.3.js')}}"></script>
-  <script src="{{asset('js_II/aos.js')}}"></script>
-  <script src="{{asset('js_II/jquery.fancybox.min.js')}}"></script>
-  <script src="{{asset('js_II/jquery.sticky.js')}}"></script>
+    </div>
+    <!-- .site-wrap -->
+    @stack('scripts')
+    <<script src="{{asset('js_II/jquery-3.3.1.min.js')}}"></script>
+    <<script src="{{asset('js_II/jquery-migrate-3.0.1.min.js')}}"></script>
+    <script src="{{asset('js_II/jquery-ui.js')}}"></script>
+    <script src="{{asset('js_II/popper.min.js')}}"></script>
+    <!-- <script src="{{asset('style-payments/js/popper.min.js')}}"></script> -->
+    <script src="{{asset('js_II/bootstrap.min.js')}}"></script>
+    <!-- <script src="{{asset('style-payments/js/bootstrap.min.js')}}"></script> -->
+    <script src="{{asset('js_II/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js_II/jquery.stellar.min.js')}}"></script>
+    <script src="{{asset('js_II/jquery.countdown.min.js')}}"></script>
+    <script src="{{asset('js_II/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{asset('js_II/jquery.easing.1.3.js')}}"></script>
+    <script src="{{asset('js_II/aos.js')}}"></script>
+    <script src="{{asset('js_II/jquery.fancybox.min.js')}}"></script>
+    <script src="{{asset('js_II/jquery.sticky.js')}}"></script>
 
 
   <script src="{{asset('js_II/main.js')}}"></script>

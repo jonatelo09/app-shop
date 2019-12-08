@@ -1,7 +1,7 @@
 <?php
 Route::get('/', 'TestController@welcome');
-Route::get('/principaldos', 'TestController@welcomedos');
-Route::get('/principal', 'TestController@principal');
+//Route::get('/principaldos', 'TestController@welcomedos');
+//Route::get('/principal', 'TestController@principal');
 Route::post('/subscriptions', 'SubscriptionController@store');
 Route::post('/admin/aspirant', 'AspirantController@store');
 
@@ -49,6 +49,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group
 	Route::get('/aspirant', 'AspirantController@index');
 
 	Route::get('/user', 'UserController@index');
+	Route::get('/profile', 'UserController@profile');
 
 });
 

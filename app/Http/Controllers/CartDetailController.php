@@ -23,15 +23,11 @@ class CartDetailController extends Controller {
 	public function destroy($id) {
 
 		$cartDetail = CartDetail::find($id);
-		//dd($cartDetail);
 
 		if ($cartDetail->cart_id == auth()->user()->cart->id) ///validad si el id del carrito de compras es del usuario que se logeo
 		{
 			$cartDetail->delete();
 		}
-
-		//dd($cartDetail);
-		//dd($request);
 
 		$notification = 'El producto se a eliminado del carrito correctamente';
 		return back()->with(compact('notification'));

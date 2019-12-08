@@ -10,4 +10,9 @@ class UserController extends Controller {
 		$users = User::paginate(5);
 		return view('admin.users.user')->with(compact('users'));
 	}
+
+	public function profile() {
+		$users = User::all();
+		return view('users.profile')->with(compact('users'));
+	}
 }
